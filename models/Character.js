@@ -44,7 +44,6 @@ Character.init(
           },
     },
     hand1_id: {
-        allowNull: false,
         references: {
             model: "weapon",
             key: "id",
@@ -52,7 +51,6 @@ Character.init(
           },
     },
     hand2_id: {
-        allowNull: false,
         references: {
             model: "weapon",
             key: "id",
