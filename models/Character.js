@@ -30,22 +30,48 @@ Character.init(
 
       },
     helm_id: {
-
+        references: {
+            model: "helm",
+            key: "id",
+            unique: false
+          },
     },
     torso_id: {
-
+        references: {
+            model: "torso",
+            key: "id",
+            unique: false
+          },
     },
     hand1_id: {
-
+        allowNull: false,
+        references: {
+            model: "weapon",
+            key: "id",
+            unique: false
+          },
     },
     hand2_id: {
-
+        allowNull: false,
+        references: {
+            model: "weapon",
+            key: "id",
+            unique: false
+          },
     },
     legs_id: {
-
+        references: {
+            model: "legs",
+            key: "id",
+            unique: false
+          },
     },
     feet_id: {
-
+        references: {
+            model: "feet",
+            key: "id",
+            unique: false
+          },
     }
   },
 
