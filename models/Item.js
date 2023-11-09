@@ -5,6 +5,9 @@ const sequelize = require('../config/connection');
 class Item extends Model { };
 Item.init(
 {
+    id: {
+
+    },
 
 },
 {
