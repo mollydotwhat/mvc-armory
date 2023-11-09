@@ -8,8 +8,11 @@ Item.init(
 
 },
 {
-
-}
+    sequelize,
+    timestamps: true,
+    underscored: true,
+    modelName: 'Item'
+  }
 );
 
 module.exports = Item;

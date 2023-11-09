@@ -29,8 +29,11 @@ Helm.init(
       }
 },
 {
-
-}
+    sequelize,
+    timestamps: true,
+    underscored: true,
+    modelName: 'Helm'
+  }
 );
 
 module.exports = Helm;

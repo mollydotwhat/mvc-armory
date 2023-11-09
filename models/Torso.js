@@ -30,8 +30,11 @@ Torso.init(
 
 },
 {
-
-}
+    sequelize,
+    timestamps: true,
+    underscored: true,
+    modelName: 'Torso'
+  }
 );
 
 module.exports = Torso;
