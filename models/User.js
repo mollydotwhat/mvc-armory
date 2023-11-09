@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class User extends Model {}
-
+// will need relationship to Characters
 User.init(
   {
     first_name: {
