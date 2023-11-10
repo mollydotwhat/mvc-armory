@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Drag and Drop</title>
+</head>
+<body>
+  <div class="container">
+    <div id="left">
+      <div id='drag_element_1' class="item head" draggable="true" ondragstart="drag(event)">Head 1</div>
+      <div id='drag_element_2' class="item head" draggable="true" ondragstart="drag(event)">Head 2</div>
+      <div id='drag_element_3' class="item torso" draggable="true" ondragstart="drag(event)">Torso 1</div>
+      <div id='drag_element_4' class="item leg" draggable="true" ondragstart="drag(event)">Legs</div>
+      <div id='drag_element_5' class="item feet" draggable="true" ondragstart="drag(event)">Feet</div>
+    </div>
+
+    <div id="right">
+      <div id=head_slot class="slot" ondrop="drop(event)" ondragover="allowDrop_head(event)"></div>
+      <div id=torso_slot class="slot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div id=leg_slot class="slot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div id=feet_slot class="slot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div id=slot_5 class="slot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+
+  </div>  
+
+  <script src="./assets/js/dragAndDrop3.js"></script>
+</body>
+</html>
