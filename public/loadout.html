@@ -8,13 +8,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://fonts.google.com/specimen/VT323?classification=Monospace">
   <link rel="stylesheet" href="../assets/css/loadout.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
 </head>
 
 <body>
 
-  <div class="grid-container">
+  <div class="main-grid">
 
-    <!--character-->
     <div class="card-character">
       <img src="../assets/images/character.gif" class="char-gif">
       <h1 class="char-name">Character</h1>
@@ -28,22 +29,21 @@
     </div>
 
     <!--loadout-->
-    <div class="card-loadout">
-      <h1 class="loadout-name">Loadout</h1>
-      <!-- <h4>Helmet</h4> -->
-      <div class="card-item">
+    <div class="card-loadout" id="loadout-id">
+      
+      <h1>Loadout</h1>
+      <div class="slot" id="head_slot">
         <h5>Iron Bucket</h5>
-        <img src="../assets/images/items/helmets/helmet1.png">
+        <img src=" ../assets/images/items/helmets/helmet1.png">
         <div class="card-values">
-          <span class="healthClass">6</span>
-          <span class="armorClass">6</span>
-          <span class="attackClass">2</span>
-          <span class="defenseClass">7</span>
-          <span class="speedClass">1</span>
+          <span class="healthClass">0</span>
+          <span class="armorClass">0</span>
+          <span class="attackClass">0</span>
+          <span class="defenseClass">0</span>
+          <span class="speedClass">0</span>
         </div>
       </div>
-      <!-- <h4>Chestpeice</h4> -->
-      <div class="card-item">
+      <div class="slot" id="torso_slot">
         <h5>Leather Tunic</h5>
         <img src="../assets/images/items/armors/armor1.png">
         <div class="card-values">
@@ -53,49 +53,47 @@
           <span class="defenseClass">3</span>
           <span class="speedClass">5</span>
         </div>
-      </div>
-      <!-- <h4>Boots</h4> -->
-      <div class="card-item">
-        <h5>Swift Tread</h5>
-        <img src="../assets/images/items/boots/boots1.png">
-        <div class="card-values">
-          <span class="healthClass">3</span>
-          <span class="armorClass">2</span>
-          <span class="attackClass">1</span>
-          <span class="defenseClass">1</span>
-          <span class="speedClass">7</span>
+       </div>
+        <div class="slot" id="feet_slot">
+          <h5>Swift Tread</h5>
+          <img src=" ../assets/images/items/boots/boots1.png">
+          <div class="card-values">
+            <span class="healthClass">3</span>
+            <span class="armorClass">2</span>
+            <span class="attackClass">1</span>
+            <span class="defenseClass">1</span>
+            <span class="speedClass">7</span>
+          </div>
+        </div>
+        <div class="slot" id="melee_slot">
+          <h5>Sword of Gary</h5>
+          <img src="../assets/images/items/weapons/sword3.png">
+          <div class="card-values">
+            <span class="healthClass">1</span>
+            <span class="armorClass">1</span>
+            <span class="attackClass">10</span>
+            <span class="defenseClass">3</span>
+            <span class="speedClass">8</span>
+          </div>
+        </div>
+        <div class="slot" id="shield_slot">
+          <h5>Bug Defender</h5>
+          <img src="../assets/images/items/shields/shield2.png">
+          <div class="card-values">
+            <span class="healthClass">7</span>
+            <span class="armorClass">7</span>
+            <span class="attackClass">1</span>
+            <span class="defenseClass">5</span>
+            <span class="speedClass">1</span>
+          </div>
         </div>
       </div>
-      <!-- <h4>Weapon</h4> -->
-      <div class="card-item">
-        <h5>Swift Tread</h5>
-        <img src="../assets/images/items/weapons/sword3.png">
-        <div class="card-values">
-          <span class="healthClass">1</span>
-          <span class="armorClass">1</span>
-          <span class="attackClass">10</span>
-          <span class="defenseClass">3</span>
-          <span class="speedClass">8</span>
-        </div>
-      </div>
-      <!-- <h4>Shield</h4> -->
-      <div class="card-item">
-        <h5>Swift Tread</h5>
-        <img src="../assets/images/items/shields/shield2.png">
-        <div class="card-values">
-          <span class="healthClass">7</span>
-          <span class="armorClass">7</span>
-          <span class="attackClass">1</span>
-          <span class="defenseClass">5</span>
-          <span class="speedClass">1</span>
-        </div>
-      </div>
-    </div>
+    
 
     <!--inventory-->
     <div class="card-inventory">
       <h1>Helmets</h1>
-      <div class="card-item">
+      <div class="card-item item drag head" draggable="=true">
         <h5>Iron Bucket</h5>
         <img src="../assets/images/items/helmets/helmet1.png">
         <div class="card-values">
@@ -106,7 +104,7 @@
           <span class="speedClass">1</span>
         </div>
       </div>
-      <div class="card-item">
+      <div class="item drag head" draggable="true">
         <h5>Cobalt Crown</h5>
         <img src="../assets/images/items/helmets/helmet2.png">
         <div class="card-values">
@@ -117,7 +115,7 @@
           <span class="speedClass">3</span>
         </div>
       </div>
-      <div class="card-item">
+      <div class="item drag head" draggable="true">
         <h5>Cranium Big</h5>
         <img src="../assets/images/items/helmets/helmet3.png">
         <div class="card-values">
@@ -128,7 +126,7 @@
           <span class="speedClass">10</span>
         </div>
       </div>
-      <div class="card-item">
+      <div class="item drag head" draggable="true">
         <h5>Crusader Helm</h5>
         <img src="../assets/images/items/helmets/helmet4.png">
         <div class="card-values">
@@ -139,7 +137,7 @@
           <span class="speedClass">4</span>
         </div>
       </div>
-      <div class="card-item">
+      <div class="item noDrag head" draggable="true">
         <h5>Viking Helm</h5>
         <img src="../assets/images/items/helmets/helmet5.png">
         <div class="card-values">
@@ -151,8 +149,13 @@
         </div>
       </div>
     </div>
-
   </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+  <script src="../assets/js/dragAndDrop4.js"></script>
 </body>
 
 </html>

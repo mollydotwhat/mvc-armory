@@ -16,7 +16,7 @@ body {
 /* main grid */
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr 2fr 1fr auto auto auto;
   grid-auto-flow: column;
   opacity: .9;
   gap: 25px;
@@ -68,7 +68,7 @@ body {
 /* character loadout */
 .card-loadout {
   display: grid;
-  grid-auto-flow: row;
+  grid-auto-flow: column;
   border-style: ridge;
   border: 5px solid;
   border-color: darkgray;
@@ -106,6 +106,22 @@ body {
 
 /* item */
 .card-item {
+  padding: 3px;
+  border: 5px solid;
+  border-style: ridge;
+  border-color: dimgray;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(22, 17, 14);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 125px;
+  min-width: 125px;
+  max-height: 125px;
+  min-height: 125px;
+}
+
+.slot-item {
   padding: 3px;
   border: 5px solid;
   border-style: ridge;
