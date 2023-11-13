@@ -18,6 +18,5 @@
     "mysql2": "^3.6.3",
     "sequelize": "^6.34.0"
   },
-  "keywords": [],
   "description": ""
 }
