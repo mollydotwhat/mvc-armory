@@ -1,8 +1,8 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-//id, columns for items by type. name? stats
+
 // foreign keys for items
-// foreign key for user 
+//Helmet, Torso, Boots, Weapons, Shields, Gems
 class Character extends Model {}
 
 Character.init(
@@ -13,7 +13,7 @@ Character.init(
     primaryKey: true,
     autoIncrement: true
 
-  },
+      },
     user_id: {
         allowNull: false,
         references: {
@@ -21,55 +21,52 @@ Character.init(
             key: "id",
             unique: false
           },
-    },
+      },
     char_name: {
         type: DataTypes.STRING,
         allowNull: false
       },
-    health: {
-        type: DataTypes.INTEGER
+    helmet_id: {
+      references: {
+        model: "item",
+        key: "id",
+        unique: false
+        },
       },
-    helm_id: {
-        references: {
-            model: "helm",
-            key: "id",
-            unique: false
-          },
-    },
     torso_id: {
-        references: {
-            model: "torso",
-            key: "id",
-            unique: false
-          },
-    },
-    hand1_id: {
-        references: {
-            model: "weapon",
-            key: "id",
-            unique: false
-          },
-    },
-    hand2_id: {
-        references: {
-            model: "weapon",
-            key: "id",
-            unique: false
-          },
-    },
-    legs_id: {
-        references: {
-            model: "legs",
-            key: "id",
-            unique: false
-          },
-    },
-    feet_id: {
-        references: {
-            model: "feet",
-            key: "id",
-            unique: false
-          },
+      references: {
+        model: "item",
+        key: "id",
+        unique: false
+        },
+      },
+    weapon_id: {
+      references: {
+        model: "item",
+        key: "id",
+        unique: false
+        },
+      },
+    shield_id: {
+      references: {
+        model: "item",
+        key: "id",
+        unique: false
+        },
+      },
+    boots_id: {
+      references: {
+        model: "item",
+        key: "id",
+        unique: false
+        },
+      },
+    gem_id: {
+      references: {
+        model: "item",
+        key: "id",
+        unique: false
+        },
     }
   },
 
