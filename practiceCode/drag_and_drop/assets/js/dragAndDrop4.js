@@ -1,80 +1,3 @@
-// function allowDrop(event) {
-//   console.log(event)
-//   if (event.target.id === "head_slot"){
-//     event.preventDefault();
-//   }
-// }
-
-// function drag(event) {
-//   console.log(event)
-//   event.dataTransfer.setData("text", event.target.id);
-// }
-
-// function drop(event) {
-//   event.preventDefault()
-//   const data = event.dataTransfer.getData("text")
-//   event.target.appendChild(document.getElementById(data))
-// }
-
-// const headItems = document.querySelectorAll(".head")
-// const torsoItems = document.querySelectorAll(".torso")
-// const pantItems = document.querySelectorAll(".pant")
-// const legItems = document.querySelectorAll(".leg")
-
-// headItems.forEach(headItem => {
-//   // Adds 'dragging' class when dragging starts
-//   headItem.addEventListener('dragstart', () => {
-//     headItem.classList.add('head_dragging')
-//   })
-//   // Removes 'dragging' class when dragging ends
-//   headItem.addEventListener('dragend', () => {
-//     headItem.classList.remove('head_dragging')
-//   })
-// })
-
-// Adds a dragstart and drag end to each item
-// function addDragListeners() {
-//   const items = document.querySelectorAll(".item")
-//   items.forEach(item => {
-//     if (item.classList.contains("head")) {
-//       item.addEventListener('dragstart', () => {
-//         item.classList.add('head_dragging')
-//       })
-//       item.addEventListener('dragend', () => {
-//         item.classList.remove('head_dragging')
-//       })
-//     }
-//   })
-// }
-
-// function addHeadItemListeners(item) {
-//   item.addEventListener('dragstart', () => {
-//     item.classList.add('head_dragging')
-//   })
-//   item.addEventListener('dragend', () => {
-//     item.classList.remove('head_dragging')
-//   })
-// }
-
-// Functions that allow character slots to accept certain items based off HTML class
-// const headSlot = document.querySelector('#head_slot')
-// const torsoSlot = document.querySelector('#torso_slot')
-// const legSlot = document.querySelector('#leg_slot')
-// const feetSlot = document.querySelector('#feet_slot')
-
-// headSlot.addEventListener('dragover', (event) => {
-//   try {
-//     event.preventDefault()
-//     const headDrag = document.querySelector('.head_dragging')
-//     headSlot.appendChild(headDrag)
-//   } catch (error) {
-//   }
-// })
-// -------------------------------------------
-// Usable Code Below
-// -------------------------------------------
-
-
 // Functions that make items draggable
 function setupDragListeners() {
   const items = document.querySelectorAll(".item")
@@ -140,9 +63,8 @@ function addDragOverListener(slot, slotType) {
   slot.addEventListener('dragover', (event) => {
     try {
       const item = document.querySelector(`.${slotType}_dragging`)
-
-      slot.appendChild(item)
       event.preventDefault()
+      slot.appendChild(item)
     } catch (error) {
     }
   })
