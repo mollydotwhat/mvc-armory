@@ -1,22 +1,10 @@
 // const User = require('./User');
+// think I need to fix fields in User model, because of how one-to-many works.
 
-// ONE-to-ONE OR One-to-Many
-// ==============================
-// hasOne always goes on the model that does NOT have the foreign key
-/*
-  ModelA.hasOne(ModelB, {
-    foreignKey: 'A_id',
-    onDelete: 'CASCADE'
-  })
-*/
-// belongsTp always goes on the model that DOES have the foreign key
-/*
-  ModelB.belongsTo(ModelA, {
-    foreignKey: 'A_ids',
-    onDelete: 'CASCADE'
-  })
+// User hasMany(character), character belongsTo(user)
 
-*/
+// items & characters are belongsToMany, using a through table written in sequelize.define statement. Statement can take objects, which will reference the models & keys.
 
 
-// module.exports = { User }
+
+// module.exports = { User, Character, Item }
