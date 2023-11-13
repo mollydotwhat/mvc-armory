@@ -15,8 +15,15 @@ User.init(
     },
     password: {
       type: DataTypes.STRING
-    }
-  },
+    },
+    character_id: {
+      references: {
+          model: "character",
+          key: "id",
+          unique: false
+        },
+  }
+},
 
   {
       hooks: {
