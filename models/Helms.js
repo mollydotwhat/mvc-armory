@@ -1,1 +1,0 @@
-// id, stats, img link.

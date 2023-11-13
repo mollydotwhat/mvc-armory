@@ -35,6 +35,10 @@
 .drag {cursor: grab;}
 .noDrag {cursor: not-allowed;}
 
+
+.item.dragging {
+  opacity: 0.5;
+}
 .slot {
   background: #1e5ee9;
   height: 60px;
@@ -42,8 +46,4 @@
   color: #fff;
   display: flex;
   align-items: center;
-}
-
-.item.dragging {
-  opacity: 0.5;
 }

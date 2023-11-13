@@ -1,1 +1,0 @@
-// id Pk, name/desc, stats, img. material? category?
