@@ -5,7 +5,18 @@ const Item = require('./Item');
 const sequelize = require('sequelize');
 
 const CharacterItem = sequelize.define('CharacterItem', {
-  
+  CharacterId: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: Character,
+      key: 'id'
+    }},
+  ItemId: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: Item,
+      key: 'id'
+    }}
 } 
 );
 
@@ -23,10 +34,6 @@ Character.belongsTo(User, {
   onDelete: 'UPDATE',
 })
 
-Character.hasMany(Items, {
-  foreignKey: 'character_id',
-  onDelete: 'UPDATE',
-})
 
 Character.belongsToMany(Item, { through: 'CharacterItem' });
 Item.belongsToMany(Character, { through: 'CharacterItem' });
