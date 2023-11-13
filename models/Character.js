@@ -67,7 +67,7 @@ Character.init(
         key: "id",
         unique: false
         },
-    }
+      }
   },
 
   {
