@@ -1,1 +1,0 @@
-// type? name? id, stats, img link. 

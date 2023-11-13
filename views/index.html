@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<style>
+  body {
+    font-family: "VT323", monospace;
+    background-image: url("../projects/mvc-armory/assets/images/userUI/home.gif");
+    background-size: cover;
+    gap: 0;
+    padding: 0;
+    height: 100vh;
+  }
+
+  * {
+    font-size: 1.0rem;
+    color: whitesmoke;
+    opacity: 100%;
+  }
+
+  .btn:hover {
+    font-size: 1.1rem;
+  }
+
+  .healthClass {
+    color: rgb(248, 75, 75);
+  }
+
+  .armorClass {
+    color: rgb(91, 91, 255)
+  }
+
+  .attackClass {
+    color: rgb(255, 196, 86)
+  }
+
+  .defenseClass {
+    color: rgb(69, 195, 69)
+  }
+
+  .speedClass {
+    color: rgb(222, 66, 249)
+  }
+
+  span {
+    font-size: 1.1rem;
+  }
+</style>
+</head>
+
+<nav class="navbar navbar-expand-lg bg-secondary-subtle mb-2 pb-2 shadow-lg border-bottom border-1 border-light">
+  <!--drop down characters-->
+  <div class="container mt-3 mb-3 pb-3 pt-3">
+    <div class="dropdown">
+      <a class="btn btn-secondary border border-primary-subtle dropdown-toggle" role="button" type="button"
+        id="dropdownMenuButtonDark" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-people-fill px-1 "
+          style="font-size: 1.1rem;"></i>Characters</a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
+        <li><a class="dropdown-item active" href="#">Sean</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Franklin</a></li>
+        <li><a class="dropdown-item" href="#">Molly</a></li>
+        <li><a class="dropdown-item" href="#">Lucas</a></li>
+        <li><a class="dropdown-item" href="#">Brenden</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">View All</a></li>
+      </ul>
+    </div>
+    <!-- customize -->
+    <div>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class=" btn btn-secondary btn-outline-dark border border-warning-subtle text-white"
+            type="button" role="button" href="#"><i class="bi bi-gear-fill px-1"></i>Customize</a>
+        </li>
+      </ul>
+    </div>
+    <!-- login/logout -->
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="btn btn-secondary btn-outline-success text-white" type="button" role="button"
+          href="#">Sign in</a>
+      </li>
+      <li class="nav-item"><a class="btn btn-secondary btn-outline-danger text-white" type="button" role="button"
+          href="#">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<body>
+  <!--main-->
+  <main class="container mt-2 pt-2 g-5 mb-2 pb-2">
+    <!--about container -->
+    <div
+      class="container bg-secondary-subtle shadow-lg mt-2 g-2 pt-2 px-5 justify-content-center border-light border text-center">
+      <div
+        class="h2 mx-auto mt-2 mb-2 p-2 text-danger border-2 text-warning-emphasis border-bottom border-light-subtle">
+        About
+      </div>
+      <p class="pb-5 text-s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices lobortis
+        dapibus. Vivamus
+        sed eleifend risus. Nulla id sapien nulla. Cras efficitur eleifend dui a ultricies. Sed quis convallis nibh.
+        Vestibulum quis erattristique pharetra. Curabitur bibendum lectus eu ante laoreet pellentesque. Integer orci
+        vehicula dignissim, placerat at libero. Sed ut elit sed justo accumsan </p>
+    </div>
+
+    <!--cards, left card-->
+    <div class="col pt-2 mt-2">
+      <div class="row">
+        <div class="container" style="max-width:50%;">
+          <div class="card mb-3 bg-secondary-subtle shadow-lg rounded-1 border-1 border ridge border-light">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="../assets/images/userUI/ponder.gif" class="img-fluid  m-2 p-1" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-header">Card title</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices lobortis
+                    dapibus. Vivamus sed eleifend risus.ultric con</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- right card-->
+        <div class="container" style="max-width:50%;">
+          <div class="card mb-3 bg-secondary-subtle shadow-lg rounded border-1 border ridge border-light">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="../assets/images/userUI/ponder.gif" class="img-fluid  m-2 p-1" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-header">Card title</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices lobortis
+                    dapibus. Vivamus sed eleifend risus.ultric con</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--loadout-->
+    <div class="container bg-secondary-subtle shadow-lg justify-content-center border-light border text-center">
+      <div class="h3 mx-auto mt-2 mb-4 text-danger border-2 text-warning-emphasis border-bottom border-light-subtle">
+        Customize Loadout
+      </div>
+      <nav class="nav nav-tabs d-flex flex justify-content-center">
+        <a class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Helmets</a>
+          <a class="nav-item">
+            <a class="nav-link disabled " href="#">Torso</a>
+          </a>
+          <a class="nav-item">
+            <a class="nav-link disabled" href="#">Boots</a>
+          </a>
+          <a class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Weapons</a>
+          </a>
+          <a class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Shields</a>
+          </a>
+          <a class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Gems</a>
+          </a>
+      </nav>
+      <!-- character container -->
+      <div class="container shadow-lg border bg-dark-subtle border-2 border-light-subtle mt-2 mb-2 pt-2 pb-2"
+        style="min-width:450px; max-width:500px; min-height:700px">
+        <div class="container-fluid justify-content-center">
+          <h1 class="border-bottom">Character</h1>
+          <img src="../assets/images/userUI/character.gif" class="char-gif mb-1">
+          <div class="row">
+            <div class="char-values" style="font-size:3rem">
+              <span><i class="bi bi-heart-fill"> </i><span class="healthClass">17</span></span>
+              <span><i class="bi bi-shield-shaded"></i> <span class="armorClass">13</span></span>
+              <span><i class="bi bi-hammer"></i> <span class="attackClass">12</span></span>
+              <span><i class="bi bi-bricks"></i> <span class="defenseClass">11</span></span>
+              <span><i class="bi bi-lightning-fill"></i> <span class="speedClass">13</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!--helmet-->
+        <div class="row justify-content-center">
+          <div class="col-3 col-sm-3 col-lg-3 justify-content-center">
+            <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
+              style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+              <div class="card-body text-wrap">Helm
+                <img src="../assets/images/items/helmets/helmet3.png" class="card-img"
+                  style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+                <div class="card-values">
+                  <span class="healthClass">3</span>
+                  <span class="armorClass">4</span>
+                  <span class="attackClass">10</span>
+                  <span class="defenseClass">3</span>
+                  <span class="speedClass">4</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--shield-->
+        <div class="row justify-content-center">
+          <div class="col-3 col-sm-3 col-lg-3">
+            <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
+              style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+              <div class="card-body text-wrap">Shield
+                <img src="../assets/images/items/shields/shield3.png" class="card-img"
+                  style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+                <div class="card-values">
+                  <span class="healthClass">3</span>
+                  <span class="armorClass">4</span>
+                  <span class="attackClass">10</span>
+                  <span class="defenseClass">3</span>
+                  <span class="speedClass">4</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--torso-->
+          <div class="col-3 col-sm-3 col-lg-3">
+            <div class="card bg-dark-subtle shadow-lg border-light justify-content-center text-center"
+              style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+              <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
+                style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+                <div class="card-body text-wrap">Carapace
+                  <img src="../assets/images/items/armors/armor3.png" class="card-img"
+                    style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+                  <div class="card-values">
+                    <span class="healthClass">10</span>
+                    <span class="armorClass">3</span>
+                    <span class="attackClass">10</span>
+                    <span class="defenseClass">3</span>
+                    <span class="speedClass">4</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--weapon-->
+          <div class="col-3 col-sm-3 col-lg-3">
+            <div class="card bg-dark-subtle shadow-lg border-light justify-content-center text-center"
+              style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+              <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
+                style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+                <div class="card-body text-wrap">Weapon
+                  <img src="../assets/images/items/weapons/staff1.png" class="card-img"
+                    style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+                  <div class="card-values">
+                    <span class="healthClass">3</span>
+                    <span class="armorClass">4</span>
+                    <span class="attackClass">10</span>
+                    <span class="defenseClass">3</span>
+                    <span class="speedClass">4</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- gem -->
+        <div class="row justify-content-center">
+          <div class="col-3 col-sm-3 col-lg-3">
+            <div class="card bg-dark-subtle shadow-lg border-light justify-content-center text-center"
+              style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+              <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
+                style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+                <div class="card-body text-wrap">Health Gem
+                  <img src="../assets/images/items/gems/healthGem.png" class="card-img"
+                    style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+                  <div class="card-values">
+                    <span class="healthClass">10</span>
+                    <span class="armorClass">3</span>
+                    <span class="attackClass">10</span>
+                    <span class="defenseClass">3</span>
+                    <span class="speedClass">4</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--boots -->
+          <div class="col-3 col-sm-3 col-lg-3">
+            <div class="card bg-dark-subtle shadow-lg border-light justify-content-center text-center"
+              style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+              <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
+                style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+                <div class="card-body text-wrap">Boots
+                  <img src="../assets/images/items/boots/boots5.png" class="card-img"
+                    style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+                  <div class="card-values">
+                    <span class="healthClass">3</span>
+                    <span class="armorClass">4</span>
+                    <span class="attackClass">10</span>
+                    <span class="defenseClass">3</span>
+                    <span class="speedClass">4</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
+
+
+
+<!-- comments
+  
+        <div class=" bg-secondary-subtle border-light border border-1">
+        <img src="../projects/mvc-armory/assets/images/userUI/character.gif" class="char-gif">
+        <h1 class="">Character</h1>
+        <div class="row">
+          <div class="char-values">
+            <span><i class="bi bi-heart-fill"> </i><span class="healthClass">17</span></span>
+            <span><i class="bi bi-shield-shaded"></i> <span class="armorClass">13</span></span>
+            <span><i class="bi bi-hammer"></i> <span class="attackClass">12</span></span>
+            <span><i class="bi bi-bricks"></i> <span class="defenseClass">11</span></span>
+            <span><i class="bi bi-lightning-fill"></i> <span class="speedClass">13</span></span>
+          </div>
+        </div>
+      </div>
+
+  <div class="bg-opacity-50 border border-3">
+          <img src="../projects/mvc-armory/assets/images/userUI/character.gif" class="char-gif">
+          <h1 class="">Character</h1>
+          <div class="row">
+            <div class="char-values">
+              <span>Health <span class="healthClass">17</span></span>
+              <span>Armor <span class="armorClass">13</span></span>
+              <span>Attack <span class="attackClass">12</span></span>
+              <span>Defense <span class="defenseClass">11</span></span>
+              <span>Speed <span class="speedClass">13</span></span>
+            </div>
+          </div>
+        </div>
+
+  
+  <img src="../projects/mvc-armory/assets/images/userUI/fireman.gif" class="card-img-top" alt="...">
+  img src="../projects/mvc-armory/assets/images/items/shields/shield3.png" class="card-img" alt="...">
+  <img src="../projects/mvc-armory/assets/images/userUI/default.gif" style="max-width: 100%; max-height: 75%;">
+ 
+ <img src="../projects/mvc-armory/assets/images/userUI/fireman.gif" class="card-img-top" alt="...">
+  <img src="../projects/mvc-armory/assets/images/items/shields/shield3.png" class="card-img" alt="...">
+  <img src="../projects/mvc-armory/assets/images/userUI/default.gif" style="max-width: 100%; max-height: 75%;">
+ 
+<div class="container">
+  <div class="card bg-dark-subtle shadow-lg border-light justify-content-center text-center"
+    style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+    <card class="card-title">Bucklerrrr</span>
+      <img src="../projects/mvc-armory/assets/images/items/shields/shield3.png" class="card-img"
+        style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+      <div class="card-values">
+        <span class="healthClass">3</span>
+        <span class="armorClass">4</span>
+        <span class="attackClass">10</span>
+        <span class="defenseClass">3</span>
+        <span class="speedClass">4</span>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card bg-dark-subtle shadow-lg border-light justify-content-center text-center"
+    style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+    <card class="card-title">Bucklerrrr</span>
+      <img src="../projects/mvc-armory/assets/images/items/shields/shield3.png" class="card-img"
+        style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+      <div class="card-values">
+        <span class="healthClass">3</span>
+        <span class="armorClass">4</span>
+        <span class="attackClass">10</span>
+        <span class="defenseClass">3</span>
+        <span class="speedClass">4</span>
+      </div>
+  </div>
+</div>
+
+drop down select button
+
+  <div class="dropdown" data-bs-theme="dark">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonDark" data-bs-toggle="dropdown"
+    aria-expanded="false">
+ Characters
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
+    <li><a class="dropdown-item active" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li>
+      <hr class="dropdown-divider">
+    </li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
+
+-->

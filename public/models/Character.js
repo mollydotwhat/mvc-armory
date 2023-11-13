@@ -1,0 +1,1 @@
+//id, columns for items by type. name? stats
