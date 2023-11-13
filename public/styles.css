@@ -1,0 +1,45 @@
+div.main-container {
+  justify-content: space-around;
+  background-color: rgb(10, 9, 8);
+  opacity: 60%;
+  display: inline-block;
+  margin: 36px; 
+  border-style: double;
+  border: 1px solid white;
+}
+
+p {
+  margin: 5px;
+  color: white;
+}
+
+img {
+  padding: 5px;
+}
+
+body {
+  background-image: url('./assets/background-img.gif');
+  background-size: cover;
+}
+
+h1 {
+  justify-content: center;
+  color: gold;
+  background-color: black;
+  border: 1px solid white;
+  opacity: 60%;
+}
+
+button.sign-in {
+  display: flex;
+  margin-right: 10px;
+  color: white;
+  background-color: darkgreen;
+}
+
+button.sign-out {
+  display: flex;
+  margin-right: 10px;
+  color: white;
+  background-color: darkred;
+}
