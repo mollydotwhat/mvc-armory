@@ -12,17 +12,46 @@ User.init(
   {
     username: {
       type: DataTypes.STRING
-    },
+  },
     password: {
       type: DataTypes.STRING
-    },
-    character_id: {
-      references: {
-          model: "character",
-          key: "id",
-          unique: false
-        },
-  }
+  },
+  // don't THINK these fields are necessary now
+  //   character1_id: {
+  //     references: {
+  //         model: "character",
+  //         key: "id",
+  //         unique: false
+  //       },
+  // },
+  //   character2_id: {
+  //     references: {
+  //         model: "character",
+  //         key: "id",
+  //         unique: false
+  //       },
+  // },
+  //   character3_id: {
+  //     references: {
+  //         model: "character",
+  //         key: "id",
+  //         unique: false
+  //       },
+  // },
+  //   character4_id: {
+  //     references: {
+  //         model: "character",
+  //         key: "id",
+  //         unique: false
+  //       },
+  // },
+  //   character5_id: {
+  //     references: {
+  //         model: "character",
+  //         key: "id",
+  //         unique: false
+  //       },
+  // },
 },
 
   {
