@@ -1,10 +1,8 @@
 const User = require('./User');
-const Torso = require('./Torso');
+
 const Charecter = require('./Character');
-// const Feet = require('./Feet');
-const Helms = require('./Helms');
 const Item = require('./Item');
-const Weapons = require('./Weapon');
+
 // gems when made--
 
 
