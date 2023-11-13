@@ -16,6 +16,7 @@ User.init(
     password: {
       type: DataTypes.STRING
   },
+  // don't THINK these fields are necessary now
   //   character1_id: {
   //     references: {
   //         model: "character",
