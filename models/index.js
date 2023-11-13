@@ -1,5 +1,33 @@
-// const User = require('./User');
+const User = require('./User');
+const Torso = require('./Torso');
+const Charecter = require('./Character');
+// const Feet = require('./Feet');
+const Helms = require('./Helms');
+const Item = require('./Item');
+const Weapons = require('./Weapon');
+// gems when made--
 
+
+User.hasMany(Charecter, {
+  foreignKey: 'charecter_id',
+
+  onDelete: 'CASCADE',
+})
+
+
+Charecter.hasOne(User, {
+  foreignKey: 'User_id',
+
+  onDelete: 'UPDATE',
+})
+
+// Charecter.hasMany(Helms, Torso, Weapons, {
+//   foreignKey: 'charecter_id',
+
+//   onDelete: 'UPDATE',
+// })
+
+// const User = require('./User');
 // ONE-to-ONE OR One-to-Many
 // ==============================
 // hasOne always goes on the model that does NOT have the foreign key
