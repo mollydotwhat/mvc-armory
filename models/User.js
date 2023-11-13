@@ -16,41 +16,41 @@ User.init(
     password: {
       type: DataTypes.STRING
   },
-    character1_id: {
-      references: {
-          model: "character",
-          key: "id",
-          unique: false
-        },
-  },
-    character2_id: {
-      references: {
-          model: "character",
-          key: "id",
-          unique: false
-        },
-  },
-    character3_id: {
-      references: {
-          model: "character",
-          key: "id",
-          unique: false
-        },
-  },
-    character4_id: {
-      references: {
-          model: "character",
-          key: "id",
-          unique: false
-        },
-  },
-    character5_id: {
-      references: {
-          model: "character",
-          key: "id",
-          unique: false
-        },
-  },
+  //   character1_id: {
+  //     references: {
+  //         model: "character",
+  //         key: "id",
+  //         unique: false
+  //       },
+  // },
+  //   character2_id: {
+  //     references: {
+  //         model: "character",
+  //         key: "id",
+  //         unique: false
+  //       },
+  // },
+  //   character3_id: {
+  //     references: {
+  //         model: "character",
+  //         key: "id",
+  //         unique: false
+  //       },
+  // },
+  //   character4_id: {
+  //     references: {
+  //         model: "character",
+  //         key: "id",
+  //         unique: false
+  //       },
+  // },
+  //   character5_id: {
+  //     references: {
+  //         model: "character",
+  //         key: "id",
+  //         unique: false
+  //       },
+  // },
 },
 
   {
