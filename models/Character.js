@@ -27,7 +27,7 @@ Character.init(
         allowNull: false
       },
     health: {
-
+        type: DataTypes.INTEGER
       },
     helm_id: {
         references: {
