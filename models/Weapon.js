@@ -1,40 +1,64 @@
 // type? name? id, stats, img link. 
-
-// inherit stats w/foreign keys
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-// type/slot? id, name
 
-class Weapon extends Model { };
-Weapon.init( 
-    {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true       
-          },
-          img: {
-            
-          },
-          attack: {
-            type: DataTypes.INTEGER
-          },
-          defense: {
-            type: DataTypes.INTEGER
-          },
-          speed: {
-            type: DataTypes.INTEGER
-          }
+class Weapons extends Model {}
+
+Weapons.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    
+    item_type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    health:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    armor:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    attack:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    defense:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    speed:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    link_to_photo:{
 
     },
-
+    material: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+ 
+  },
   {
     sequelize,
-    timestamps: true,
+    freezeTableName: true,
     underscored: true,
-    modelName: 'Weapon'
+    modelName: 'Weapons',
   }
 );
 
-module.exports = Weapon;
+module.exports = Weapons;
