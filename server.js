@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Home page route
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/index.html'))
+  res.sendFile(path.join(__dirname, 'public/homepage.html'))
 })
 
 // All other routes are directed elsewhere
