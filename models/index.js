@@ -1,50 +1,42 @@
 const User = require('./User');
-const Torso = require('./Torso');
-const Charecter = require('./Character');
-// const Feet = require('./Feet');
-const Helms = require('./Helms');
+
+const Character = require('./Character');
 const Item = require('./Item');
-const Weapons = require('./Weapon');
-// gems when made--
+const sequelize = require('sequelize');
 
+const CharacterItem = sequelize.define('CharacterItem', {
+  CharacterId: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: Character,
+      key: 'id'
+    }},
+  ItemId: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: Item,
+      key: 'id'
+    }}
+} 
+);
 
-User.hasMany(Charecter, {
-  foreignKey: 'charecter_id',
-
+User.hasMany(Character, {
+  // it looks to me like the foreign id specified here is what this model gives to the character model but I may be confused.
+  foreignKey: 'user_id',
   onDelete: 'CASCADE',
 })
 
 
-Charecter.hasOne(User, {
-  foreignKey: 'User_id',
-
+// 
+Character.belongsTo(User, {
+  // in the docs it looks like this one doesn't need a foreign id specified? But maybe it doesn't mean it can't have one. leaving for now.
+  foreignKey: 'character_id',
   onDelete: 'UPDATE',
 })
 
-// Charecter.hasMany(Helms, Torso, Weapons, {
-//   foreignKey: 'charecter_id',
 
-//   onDelete: 'UPDATE',
-// })
-
-// const User = require('./User');
-// ONE-to-ONE OR One-to-Many
-// ==============================
-// hasOne always goes on the model that does NOT have the foreign key
-/*
-  ModelA.hasOne(ModelB, {
-    foreignKey: 'A_id',
-    onDelete: 'CASCADE'
-  })
-*/
-// belongsTp always goes on the model that DOES have the foreign key
-/*
-  ModelB.belongsTo(ModelA, {
-    foreignKey: 'A_ids',
-    onDelete: 'CASCADE'
-  })
-
-*/
+Character.belongsToMany(Item, { through: 'CharacterItem' });
+Item.belongsToMany(Character, { through: 'CharacterItem' });
 
 
-// module.exports = { User }
+module.exports = { User, Character, Item }
