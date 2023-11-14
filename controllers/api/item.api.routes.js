@@ -64,7 +64,7 @@ router.get("/gem", async (req, res) => {
 // GET all shields
 router.get("/shield", async (req, res) => {
     try {
-        const payload = await Item.findALL({ where : { item_type: 'helmet'}});
+        const payload = await Item.findALL({ where : { item_type: 'shield'}});
         res.status(200).json({ status: "success", payload });
     } catch(err){
         res.status(500).json({ status: "error", payload: err.message });
