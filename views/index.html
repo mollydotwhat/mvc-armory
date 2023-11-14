@@ -161,41 +161,28 @@
       <div class="h3 mx-auto mt-2 mb-4 text-danger border-2 text-warning-emphasis border-bottom border-light-subtle">
         Customize Loadout
       </div>
-      <nav class="nav nav-tabs d-flex flex justify-content-center">
+      <div id="itemSelectionTab" class="nav nav-tabs d-flex flex justify-content-center">
         <a class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Helmets</a>
-          <a class="nav-item">
-            <a class="nav-link" aria-disabled="true" href="#">Torso</a>
-          </a>
-          <a class="nav-item">
-            <a class="nav-link" aria-disabled="true" href="#">Boots</a>
-          </a>
-          <a class="nav-item">
-            <a class="nav-link" aria-disabled="true" href="#">Weapons</a>
-          </a>
-          <a class="nav-item">
-            <a class="nav-link" aria-disabled="true" href="#">Shields</a>
-          </a>
-          <a class="nav-item">
-            <a class="nav-link" aria-disabled="true" href="#">Gems</a>
-          </a>
-      </nav>
-      <div class="row justify-content-center">
-        <div class="col-3 col-sm-3 col-lg-3 justify-content-center">
-          <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
-            style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
-            <div class="card-body text-wrap">Helm
-              <img src="../assets/images/items/helmets/helmet3.png" class="card-img"
-                style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
-              <div class="card-values">
-                <span class="healthClass">3</span>
-                <span class="armorClass">4</span>
-                <span class="attackClass">10</span>
-                <span class="defenseClass">3</span>
-                <span class="speedClass">4</span>
-              </div>
-            </div>
-          </div>
+          <a id="selectHelmets" class="nav-link active" aria-current="page" >Helmets</a>
+        <a class="nav-item">
+          <a id="selectTorso" class="nav-link" aria-disabled="true" >Torso</a>
+        </a>
+        <a class="nav-item">
+          <a id="selectBoots" class="nav-link" aria-disabled="true" >Boots</a>
+        </a>
+        <a class="nav-item">
+          <a id="selectWeapons" class="nav-link" aria-disabled="true" >Weapons</a>
+        </a>
+        <a class="nav-item">
+          <a id="selectShields" class="nav-link" aria-disabled="true" >Shields</a>
+        </a>
+        <a class="nav-item">
+          <a id="selectGems" class="nav-link" aria-disabled="true" >Gems</a>
+        </a>
+      </div>
+      <div class="row justify-content-center">          
+        <div id="parentItemHolder" class="col justify-content-center">
+          <!-- items get populated by javascript here (public/js/populateItemTable) -->
         </div>
       </div>
 
@@ -206,7 +193,7 @@
           <h1 class="border-bottom">Character</h1>
           <img src="../assets/images/userUI/character.gif" class="char-gif mb-1">
           <div class="row">
-            <div class="char-values" style="font-size:3rem">
+            <div id="characterStatTotals" class="char-values" style="font-size:3rem">
               <span><i class="bi bi-heart-fill"> </i><span class="healthClass">17</span></span>
               <span><i class="bi bi-shield-shaded"></i> <span class="armorClass">13</span></span>
               <span><i class="bi bi-hammer"></i> <span class="attackClass">12</span></span>
@@ -217,9 +204,9 @@
         </div>
 
         <!--helmet-->
-        <div class="row justify-content-center">
+        <div id="helmetStats" class="row justify-content-center">
           <div class="col-3 col-sm-3 col-lg-3 justify-content-center">
-            <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
+            <div id="helmetStatsCard" class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
               style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
               <div class="card-body text-wrap">Helm
                 <img src="../assets/images/items/helmets/helmet3.png" class="card-img"
@@ -237,7 +224,7 @@
         </div>
 
         <!--shield-->
-        <div class="row justify-content-center">
+        <div id="shieldStats" class="row justify-content-center">
           <div class="col-3 col-sm-3 col-lg-3">
             <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
               style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
@@ -256,7 +243,7 @@
           </div>
 
           <!--torso-->
-          <div class="col-3 col-sm-3 col-lg-3">
+          <div id="torsoStats" class="col-3 col-sm-3 col-lg-3">
             <div class="card bg-dark-subtle shadow-lg border-light justify-content-center text-center"
               style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
               <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
@@ -277,7 +264,7 @@
           </div>
 
           <!--weapon-->
-          <div class="col-3 col-sm-3 col-lg-3">
+          <div id="weaponStats" class="col-3 col-sm-3 col-lg-3">
             <div class="card bg-dark-subtle shadow-lg border-light justify-content-center text-center"
               style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
               <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
@@ -299,7 +286,7 @@
         </div>
 
         <!-- gem -->
-        <div class="row justify-content-center">
+        <div id="gemStats" class="row justify-content-center">
           <div class="col-3 col-sm-3 col-lg-3">
             <div class="card bg-dark-subtle shadow-lg border-light justify-content-center text-center"
               style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
@@ -321,7 +308,7 @@
           </div>
 
           <!--boots -->
-          <div class="col-3 col-sm-3 col-lg-3">
+          <div id="bootStats" class="col-3 col-sm-3 col-lg-3">
             <div class="card bg-dark-subtle shadow-lg border-light justify-content-center text-center"
               style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
               <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
@@ -344,6 +331,7 @@
       </div>
     </div>
   </main>
+  <script src="../public/js/populateItemTable.js"></script>
 </body>
 
 </html>
