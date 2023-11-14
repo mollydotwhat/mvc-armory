@@ -1,13 +1,8 @@
-<<<<<<< HEAD
+
 const router = require('express').Router();
 const apiRoutes = require('./api');
 
 router.use('/api', apiRoutes);
-
-module.exports = router;
-=======
-
-const router = require('express').Router();
 
 // GET route for getting all of the dishes that are on the menu
 router.get('/', async (req, res) => {
@@ -18,4 +13,3 @@ router.get('/', async (req, res) => {
 module.exports = router;
 
 
->>>>>>> main
