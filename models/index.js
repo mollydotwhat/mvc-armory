@@ -32,12 +32,17 @@ User.hasMany(Character, {
 Character.belongsTo(User, {
   // in the docs it looks like this one doesn't need a foreign id specified? But maybe it doesn't mean it can't have one. leaving for now.
   foreignKey: 'character_id',
-  onDelete: 'UPDATE',
+  onDelete: 'SET NULL',
 })
 
 
-Character.belongsToMany(Item, { through: 'CharacterItem', foreignKey: "character_id" }, );
-Item.belongsToMany(Character, { through: 'CharacterItem', foreignKey: "character_id"  });
+Character.belongsToMany(Item, 
+  { through: CharacterItem, foreignKey: "character_id" }, 
+  );
+
+Item.belongsToMany(Character, 
+  { through: CharacterItem, foreignKey: "item_id"  }
+  );
 
 
 module.exports = { User, Character, Item, CharacterItem}
