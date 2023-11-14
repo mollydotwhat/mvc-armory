@@ -16,8 +16,9 @@ Character.init(
       },
     user_id: {
         allowNull: false,
+        type: DataTypes.STRING,
         references: {
-            model: "user",
+            model: "User",
             key: "id",
             unique: false
           },
@@ -27,20 +28,23 @@ Character.init(
         allowNull: false
       },
     helmet_id: {
+      type: DataTypes.STRING,
       references: {
-        model: "item",
+        model: "Item",
         key: "id",
         unique: false
         },
       },
     torso_id: {
+      type: DataTypes.STRING,
       references: {
-        model: "item",
+        model: "Item",
         key: "id",
         unique: false
         },
       },
     weapon_id: {
+      type: DataTypes.STRING,
       references: {
         model: "item",
         key: "id",
@@ -48,6 +52,7 @@ Character.init(
         },
       },
     shield_id: {
+      type: DataTypes.STRING,
       references: {
         model: "item",
         key: "id",
@@ -55,15 +60,17 @@ Character.init(
         },
       },
     boots_id: {
+      type: DataTypes.STRING,
       references: {
-        model: "item",
+        model: "Item",
         key: "id",
         unique: false
         },
       },
     gem_id: {
+      type: DataTypes.STRING,
       references: {
-        model: "item",
+        model: "Item",
         key: "id",
         unique: false
         },
