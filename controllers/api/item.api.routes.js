@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Item } = require('../../models/Item');
 
-// GET request by id ('/:id')
+// GET individual item
 router.get("/:id", async (req, res) => {
     try {
       const payload = await Item.findByPk(req.params.id);
@@ -10,7 +10,8 @@ router.get("/:id", async (req, res) => {
       res.status(500).json({ status: "error", payload: err.message });
     }
   })
-// GET request by item_type = helmet ('/helmet')
+
+// GET all helmets
 router.get("/helmet", async (req, res) => {
     try {
         const payload = await Item.findALL({ where : { item_type: 'helmet'}});
@@ -19,7 +20,8 @@ router.get("/helmet", async (req, res) => {
         res.status(500).json({ status: "error", payload: err.message });
     }
 })
-// GET request by item_type = torso ('/torso')
+
+// GET all torso
 router.get("/torso", async (req, res) => {
     try {
         const payload = await Item.findALL({ where : { item_type: 'torso'}});
@@ -28,7 +30,8 @@ router.get("/torso", async (req, res) => {
         res.status(500).json({ status: "error", payload: err.message });
     }
 })
-// etc... with weapon, boot, gem, and shield as well
+
+// GET all weapons
 router.get("/weapon", async (req, res) => {
     try {
         const payload = await Item.findALL({ where : { item_type: 'weapon'}});
@@ -38,6 +41,7 @@ router.get("/weapon", async (req, res) => {
     }
 })
 
+// GET all boots
 router.get("/boot", async (req, res) => {
     try {
         const payload = await Item.findALL({ where : { item_type: 'boot'}});
@@ -47,6 +51,7 @@ router.get("/boot", async (req, res) => {
     }
 })
 
+// GET all gems
 router.get("/gem", async (req, res) => {
     try {
         const payload = await Item.findALL({ where : { item_type: 'gem'}});
@@ -56,6 +61,7 @@ router.get("/gem", async (req, res) => {
     }
 })
 
+// GET all shields
 router.get("/shield", async (req, res) => {
     try {
         const payload = await Item.findALL({ where : { item_type: 'helmet'}});
@@ -64,25 +70,6 @@ router.get("/shield", async (req, res) => {
         res.status(500).json({ status: "error", payload: err.message });
     }
 })
-// router.get('/', async (req, res) => {
-//   const userData = await Item.findAll().catch((err) => {
-//     res.json(err);
-//   });
-//   res.json(userData);
-// });
 
-// module.exports = router;
+module.exports = router;
 
-
-
-// TODO: GET request for all items with item_type helmet
-
-// TODO: GET request for all items with item_type toros
-
-// TODO: GET request for all items with item_type weapon
-
-// TODO: GET request for all items with item_type shield
-
-// TODO: GET request for all items with item_type boots
-
-// TODO: GET request for all items with item_type gem
