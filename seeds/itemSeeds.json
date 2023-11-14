@@ -1,0 +1,302 @@
+[
+    {
+   "name":"base helmet",
+   "Item_type": "helmet",
+   "health":3,
+   "armor":4,
+   "attack":0,
+   "defense":4,
+   "speed":5,
+   "link_to_photo":"../assets/images/items/helmets/helmet1.png"
+},
+{
+    "name":"knights helmet",
+    "Item_type":"helmet",
+    "health":5,
+    "armor":6,
+    "attack":0,
+    "defense":6,
+    "speed":4,
+    "link_to_photo":"../assets/images/items/helmets/helmet2.png"   
+},
+{
+    "name":"Enchanted helmet",
+    "Item_type":"helmet",
+    "health":7,
+    "armor":7,
+    "attack":0,
+    "defense":6,
+    "speed":5,
+    "link_to_photo":"../assets/images/items/helmets/helmet3.png"
+},
+{
+    "name":"silver helmet",
+    "Item_type":"helmet",
+    "health":6,
+    "armor":5,
+    "attack":0,
+    "defense":7,
+    "speed":6,
+    "link_to_photo":"../assets/images/items/helmets/helmet4.png"
+},
+{
+    "name":"Gold helmet",
+    "Item_type":"helmet",
+    "health":6,
+    "armor":9,
+    "attack":0,
+    "defense":8,
+    "speed":7,
+    "link_to_photo":"../assets/images/items/helmets/helmet5.png"   
+},
+{
+    "name":"Enchanted armor",
+    "Item_type":"armor",
+    "health":7,
+    "armor":4,
+    "attack":0,
+    "defense":5,
+    "speed":7,
+    "link_to_photo":"../assets/images/items/armor/armor1.png"    
+},
+{
+    "name":"knights armor",
+    "Item_type":"armor",
+    "health":5,
+    "armor":6,
+    "attack":0,
+    "defense":6,
+    "speed":4,
+    "link_to_photo":"../assets/images/items/armor/armor2.png"   
+},
+{
+    "name":"Battle armor",
+    "Item_type":"armor",
+    "health":8,
+    "armor":7,
+    "attack":0,
+    "defense":7,
+    "speed":4,
+    "link_to_photo":"../assets/images/items/armor/armor3.png"   
+},
+{
+    "name":"light armor",
+    "Item_type":"armor",
+    "health":5,
+    "armor":4,
+    "attack":0,
+    "defense":4,
+    "speed":7,
+    "link_to_photo":"../assets/images/items/armor/armor4.png"   
+},
+{
+    "name":"heavy armor",
+    "Item_type":"armor",
+    "health":8,
+    "armor":9,
+    "attack":0,
+    "defense":8,
+    "speed":1,
+    "link_to_photo":"../assets/images/items/armor/armor5.png"    
+},
+{
+    "name":"leather boots",
+    "Item_type":"boot",
+    "health":2,
+    "armor":1,
+    "attack":0,
+    "defense":1,
+    "speed":9,
+    "link_to_photo":"../assets/images/items/boots/boots1.png"    
+},
+{
+    "name":"training boots",
+    "Item_type":"boot",
+    "health":3,
+    "armor":3,
+    "attack":0,
+    "defense":3,
+    "speed":7,
+    "link_to_photo":"../assets/images/items/boots/boots2.png"   
+},
+{
+    "name":"bronze boots",
+    "Item_type":"boot",
+    "health":5,
+    "armor":4,
+    "attack":0,
+    "defense":4,
+    "speed":5,
+    "link_to_photo":"../assets/images/items/boots/boots3.png"   
+},
+{
+    "name":"silver boots",
+    "Item_type":"boot",
+    "health":7,
+    "armor":6,
+    "attack":0,
+    "defense":5,
+    "speed":3,
+    "link_to_photo":"../assets/images/items/boots/boots4.png"   
+},
+{
+    "name":"knights boots",
+    "Item_type":"boot",
+    "health":8,
+    "armor":7,
+    "attack":0,
+    "defense":6,
+    "speed":2,
+    "link_to_photo":"../assets/images/items/boots/boots5.png"   
+},
+{
+    "name":"armor gem",
+    "Item_type":"gem",
+    "health":0,
+    "armor":9,
+    "attack":0,
+    "defense":0,
+    "speed":0,
+    "link_to_photo":"../assets/images/items/gems/armorGem.png"   
+},
+{
+    "name":"attack gem",
+    "Item_type":"gem",
+    "health":0,
+    "armor":0,
+    "attack":9,
+    "defense":0,
+    "speed":0,
+    "link_to_photo":"../assets/images/items/gems/attackGem.png"    
+},
+{
+    "name":"defense gem",
+    "Item_type":"gem",
+    "health":0,
+    "armor":0,
+    "attack":0,
+    "defense":9,
+    "speed":0,
+    "link_to_photo":"../assets/images/items/gems/defenseGem.png"   
+},
+{
+    "name":"health gem",
+    "Item_type":"gem",
+    "health":9,
+    "armor":0,
+    "attack":0,
+    "defense":0,
+    "speed":0,
+    "link_to_photo":"../assets/images/items/gems/healthGem.png"   
+},
+{
+    "name":"speed gem",
+    "Item_type":"gem",
+    "health":0,
+    "armor":0,
+    "attack":0,
+    "defense":0,
+    "speed":9,
+    "link_to_photo":"../assets/images/items/gems/speedGem.png"   
+},
+{
+    "name":"axe",
+    "Item_type":"weapon",
+    "health":0,
+    "armor":0,
+    "attack":7,
+    "defense":0,
+    "speed":0,
+    "link_to_photo":"../assets/images/items/weapons/axe5.png"   
+},
+{
+    "name":"hammer",
+    "Item_type":"weapon",
+    "health":0,
+    "armor":0,
+    "attack":6,
+    "defense":0,
+    "speed":0,
+    "link_to_photo":"../assets/images/items/weapons/hammer1.png"    
+},
+{
+    "name":"staff",
+    "Item_type":"weapon",
+    "health":0,
+    "armor":0,
+    "attack":5,
+    "defense":0,
+    "speed":0,
+    "link_to_photo":"../assets/images/items/weapons/hammer1.png"     
+},
+{
+    "name":"sword",
+    "Item_type":"weapon",
+    "health":0,
+    "armor":0,
+    "attack":8,
+    "defense":0,
+    "speed":0,
+    "link_to_photo":"../assets/images/items/weapons/sword1.png"     
+},
+{
+    "name":"wodden shield",
+    "Item_type":"shield",
+    "health":0,
+    "armor":0,
+    "attack":0,
+    "defense":5,
+    "speed":0,
+    "link_to_photo":"../assets/images/items/sheilds/shield1.png"     
+},
+{
+    "name":"knights shield",
+    "Item_type":"shield",
+    "health":0,
+    "armor":0,
+    "attack":0,
+    "defense":7,
+    "speed":0,
+    "link_to_photo":"../assets/images/items/shields/shield2.png"      
+},
+{
+    "name":"gold shield",
+    "Item_type":"shield",
+    "health":0,
+    "armor":0,
+    "attack":0,
+    "defense":9,
+    "speed":0,
+    "link_to_photo":"../assets/images/items/shields/shield3.png"      
+},
+{
+    "name":"bronze shield",
+    "Item_type":"shield",
+    "health":0,
+    "armor":0,
+    "attack":0,
+    "defense":6,
+    "speed":0,
+    "link_to_photo":"../assets/images/items/shields/shield4.png"  
+},
+{
+    "name":"iron shield",
+    "Item_type":"shield",
+    "health":0,
+    "armor":0,
+    "attack":0,
+    "defense":7,
+    "speed":0,
+    "link_to_photo":"../assets/images/items/shields/shield5.png"    
+}
+
+]
+
+
+
+
+
+
+
+
+

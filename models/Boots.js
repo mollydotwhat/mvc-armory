@@ -1,10 +1,9 @@
-// id Pk, name/desc, stats, img. material? category?
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class legs extends Model {}
+class Boots extends Model {}
 
-legs.init(
+Boots.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -56,8 +55,8 @@ legs.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'legs',
+    modelName: 'Boots',
   }
 );
 
-module.exports = legs;
+module.exports = Boots;

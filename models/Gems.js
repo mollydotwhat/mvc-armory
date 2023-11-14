@@ -1,10 +1,9 @@
-// type? name? id, stats, img link. 
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Weapons extends Model {}
+class Gems extends Model {}
 
-Weapons.init(
+Gems.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -57,8 +56,8 @@ Weapons.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Weapons',
+    modelName: 'Gems',
   }
 );
 
-module.exports = Weapons;
+module.exports = Gems;

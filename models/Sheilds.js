@@ -1,16 +1,13 @@
-// id, stats, img link.
-
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Helms extends Model {}
+class Sheilds extends Model {}
 
-Helms.init(
+Sheilds.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
       autoIncrement: true,
     },
     name: {
@@ -21,6 +18,7 @@ Helms.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    
     item_type: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -46,8 +44,7 @@ Helms.init(
       allowNull: false,
     },
     link_to_photo:{
-      type: DataTypes.STRING,
-      allowNull: false,
+
     },
     material: {
       type: DataTypes.STRING,
@@ -59,8 +56,8 @@ Helms.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'painting',
+    modelName: 'Sheilds',
   }
 );
 
-module.exports = Helms;
+module.exports = Sheilds;
