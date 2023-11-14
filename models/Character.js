@@ -17,7 +17,7 @@ Character.init(
     user_id: {
         allowNull: false,
         references: {
-            model: "user",
+            model: "User",
             key: "id",
             unique: false
           },
@@ -28,14 +28,14 @@ Character.init(
       },
     helmet_id: {
       references: {
-        model: "item",
+        model: "Item",
         key: "id",
         unique: false
         },
       },
     torso_id: {
       references: {
-        model: "item",
+        model: "Item",
         key: "id",
         unique: false
         },
@@ -56,14 +56,14 @@ Character.init(
       },
     boots_id: {
       references: {
-        model: "item",
+        model: "Item",
         key: "id",
         unique: false
         },
       },
     gem_id: {
       references: {
-        model: "item",
+        model: "Item",
         key: "id",
         unique: false
         },
