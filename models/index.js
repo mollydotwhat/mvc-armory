@@ -3,7 +3,7 @@ const User = require('./User');
 const Character = require('./Character');
 const Item = require('./Item');
 const CharacterItem = require('./CharacterItem')
-const sequelize = require('sequelize');
+// const sequelize = require('sequelize');
 
 // const CharacterItem = sequelize.define('CharacterItem', {
 //   CharacterId: {
@@ -36,8 +36,8 @@ Character.belongsTo(User, {
 })
 
 
-Character.hasMany(Item, { through: 'CharacterItem', foreignKey: "character_id" }, );
-Item.hasMany(Character, { through: 'CharacterItem', foreignKey: "character_id"  });
+Character.belongsToMany(Item, { through: 'CharacterItem', foreignKey: "character_id" }, );
+Item.belongsToMany(Character, { through: 'CharacterItem', foreignKey: "character_id"  });
 
 
 module.exports = { User, Character, Item, CharacterItem}

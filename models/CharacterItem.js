@@ -5,7 +5,8 @@ class CharacterItem extends Model {}
 
 CharacterItem.init(
     {
-    user_id: {
+    User_id: {
+        type: DataTypes.STRING,
         allowNull: false,
         references: {
             model: "User",
@@ -13,7 +14,8 @@ CharacterItem.init(
             unique: false
           },
       },
-      item_id: {
+      Item_id: {
+        type: DataTypes.STRING,
         allowNull: false,
         references: {
             model: "Item",
@@ -21,7 +23,13 @@ CharacterItem.init(
             unique: false
           },
       },
-    }
+    },
+    {
+        sequelize,
+        timestamps: true,
+        underscored: true,
+        modelName: 'Character'
+      }
 )
 //character id
 //item id
