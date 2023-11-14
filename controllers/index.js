@@ -1,5 +1,8 @@
 
 const router = require('express').Router();
+const apiRoutes = require('./api');
+
+router.use('/api', apiRoutes);
 
 // GET route for getting all of the dishes that are on the menu
 router.get('/', async (req, res) => {

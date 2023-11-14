@@ -10,6 +10,12 @@ class User extends Model {
 // will need relationship to Characters
 User.init(
   {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+        },
     username: {
       type: DataTypes.STRING
   },
