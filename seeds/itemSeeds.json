@@ -1,7 +1,7 @@
 [
     {
    "name":"base helmet",
-   "Item_type": "helmet",
+   "item_type": "helmet",
    "health":3,
    "armor":4,
    "attack":0,
@@ -11,7 +11,7 @@
 },
 {
     "name":"knights helmet",
-    "Item_type":"helmet",
+    "item_type":"helmet",
     "health":5,
     "armor":6,
     "attack":0,
@@ -21,7 +21,7 @@
 },
 {
     "name":"Enchanted helmet",
-    "Item_type":"helmet",
+    "item_type":"helmet",
     "health":7,
     "armor":7,
     "attack":0,
@@ -31,7 +31,7 @@
 },
 {
     "name":"silver helmet",
-    "Item_type":"helmet",
+    "item_type":"helmet",
     "health":6,
     "armor":5,
     "attack":0,
@@ -41,7 +41,7 @@
 },
 {
     "name":"Gold helmet",
-    "Item_type":"helmet",
+    "item_type":"helmet",
     "health":6,
     "armor":9,
     "attack":0,
@@ -51,7 +51,7 @@
 },
 {
     "name":"Enchanted armor",
-    "Item_type":"armor",
+    "item_type":"armor",
     "health":7,
     "armor":4,
     "attack":0,
@@ -61,7 +61,7 @@
 },
 {
     "name":"knights armor",
-    "Item_type":"armor",
+    "item_type":"armor",
     "health":5,
     "armor":6,
     "attack":0,
@@ -71,7 +71,7 @@
 },
 {
     "name":"Battle armor",
-    "Item_type":"armor",
+    "item_type":"armor",
     "health":8,
     "armor":7,
     "attack":0,
@@ -81,7 +81,7 @@
 },
 {
     "name":"light armor",
-    "Item_type":"armor",
+    "item_type":"armor",
     "health":5,
     "armor":4,
     "attack":0,
@@ -91,7 +91,7 @@
 },
 {
     "name":"heavy armor",
-    "Item_type":"armor",
+    "item_type":"armor",
     "health":8,
     "armor":9,
     "attack":0,
@@ -101,7 +101,7 @@
 },
 {
     "name":"leather boots",
-    "Item_type":"boot",
+    "item_type":"boot",
     "health":2,
     "armor":1,
     "attack":0,
@@ -111,7 +111,7 @@
 },
 {
     "name":"training boots",
-    "Item_type":"boot",
+    "item_type":"boot",
     "health":3,
     "armor":3,
     "attack":0,
@@ -121,7 +121,7 @@
 },
 {
     "name":"bronze boots",
-    "Item_type":"boot",
+    "item_type":"boot",
     "health":5,
     "armor":4,
     "attack":0,
@@ -131,7 +131,7 @@
 },
 {
     "name":"silver boots",
-    "Item_type":"boot",
+    "item_type":"boot",
     "health":7,
     "armor":6,
     "attack":0,
@@ -141,7 +141,7 @@
 },
 {
     "name":"knights boots",
-    "Item_type":"boot",
+    "item_type":"boot",
     "health":8,
     "armor":7,
     "attack":0,
@@ -151,7 +151,7 @@
 },
 {
     "name":"armor gem",
-    "Item_type":"gem",
+    "item_type":"gem",
     "health":0,
     "armor":9,
     "attack":0,
@@ -161,7 +161,7 @@
 },
 {
     "name":"attack gem",
-    "Item_type":"gem",
+    "item_type":"gem",
     "health":0,
     "armor":0,
     "attack":9,
@@ -171,7 +171,7 @@
 },
 {
     "name":"defense gem",
-    "Item_type":"gem",
+    "item_type":"gem",
     "health":0,
     "armor":0,
     "attack":0,
@@ -181,7 +181,7 @@
 },
 {
     "name":"health gem",
-    "Item_type":"gem",
+    "item_type":"gem",
     "health":9,
     "armor":0,
     "attack":0,
@@ -191,7 +191,7 @@
 },
 {
     "name":"speed gem",
-    "Item_type":"gem",
+    "item_type":"gem",
     "health":0,
     "armor":0,
     "attack":0,
@@ -201,7 +201,7 @@
 },
 {
     "name":"axe",
-    "Item_type":"weapon",
+    "item_type":"weapon",
     "health":0,
     "armor":0,
     "attack":7,
@@ -211,7 +211,7 @@
 },
 {
     "name":"hammer",
-    "Item_type":"weapon",
+    "item_type":"weapon",
     "health":0,
     "armor":0,
     "attack":6,
@@ -221,7 +221,7 @@
 },
 {
     "name":"staff",
-    "Item_type":"weapon",
+    "item_type":"weapon",
     "health":0,
     "armor":0,
     "attack":5,
@@ -231,7 +231,7 @@
 },
 {
     "name":"sword",
-    "Item_type":"weapon",
+    "item_type":"weapon",
     "health":0,
     "armor":0,
     "attack":8,
@@ -241,7 +241,7 @@
 },
 {
     "name":"wodden shield",
-    "Item_type":"shield",
+    "item_type":"shield",
     "health":0,
     "armor":0,
     "attack":0,
@@ -251,7 +251,7 @@
 },
 {
     "name":"knights shield",
-    "Item_type":"shield",
+    "item_type":"shield",
     "health":0,
     "armor":0,
     "attack":0,
@@ -261,7 +261,7 @@
 },
 {
     "name":"gold shield",
-    "Item_type":"shield",
+    "item_type":"shield",
     "health":0,
     "armor":0,
     "attack":0,
@@ -271,7 +271,7 @@
 },
 {
     "name":"bronze shield",
-    "Item_type":"shield",
+    "item_type":"shield",
     "health":0,
     "armor":0,
     "attack":0,
@@ -281,7 +281,7 @@
 },
 {
     "name":"iron shield",
-    "Item_type":"shield",
+    "item_type":"shield",
     "health":0,
     "armor":0,
     "attack":0,
