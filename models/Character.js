@@ -16,7 +16,7 @@ Character.init(
       },
     user_id: {
         allowNull: false,
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         references: {
             model: "User",
             key: "id",
@@ -28,7 +28,7 @@ Character.init(
         allowNull: false
       },
     helmet_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
         model: "Item",
         key: "id",
@@ -36,7 +36,7 @@ Character.init(
         },
       },
     torso_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
         model: "Item",
         key: "id",
@@ -44,23 +44,23 @@ Character.init(
         },
       },
     weapon_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
-        model: "item",
+        model: "Item",
         key: "id",
         unique: false
         },
       },
     shield_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
-        model: "item",
+        model: "Item",
         key: "id",
         unique: false
         },
       },
     boots_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
         model: "Item",
         key: "id",
@@ -68,7 +68,7 @@ Character.init(
         },
       },
     gem_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
         model: "Item",
         key: "id",
@@ -81,6 +81,7 @@ Character.init(
     sequelize,
     timestamps: true,
     underscored: true,
+    freezeTableName: true,
     modelName: 'Character'
   }
 );

@@ -5,17 +5,17 @@ class CharacterItem extends Model {}
 
 CharacterItem.init(
     {
-    User_id: {
-        type: DataTypes.STRING,
+    character_id: {
+        type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: "User",
+            model: "Character",
             key: "id",
             unique: false
           },
       },
-      Item_id: {
-        type: DataTypes.STRING,
+      item_id: {
+        type: DataTypes.INTEGER,
         allowNull: false,
         references: {
             model: "Item",
@@ -28,9 +28,12 @@ CharacterItem.init(
         sequelize,
         timestamps: true,
         underscored: true,
-        modelName: 'Character'
+        freezeTableName: true,
+        modelName: 'CharacterItem'
       }
 )
+
+module.exports = CharacterItem;
 //character id
 //item id
 
