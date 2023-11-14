@@ -1,16 +1,6 @@
-const router = require('express').Router()
+const router = require('express').Router();
+const apiRoutes = require('./api');
 
-// import all api route files here
-const userApiRoutes = require('./api/user.api.routes')
-
-// import all html files route files here
-const userHtmlRoutes = require('./html/user.html.routes')
-
-// Add api routes to the router
-router.use('/api/user', userApiRoutes);
-
-
-// Add html routes to the router
-router.use('/user', userHtmlRoutes);
+router.use('/api', apiRoutes);
 
 module.exports = router;
