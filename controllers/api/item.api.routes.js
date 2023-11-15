@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const Item = require('../../models/Item');
+const {Item} = require('../../models');
 
 // GET individual item
-router.get("/:id", async (req, res) => {
+router.get("/id/:id", async (req, res) => {
     try {
       const payload = await Item.findByPk(req.params.id);
       res.status(200).json({ status: "success", payload });
@@ -11,11 +11,21 @@ router.get("/:id", async (req, res) => {
     }
   })
 
+// GET all items
+router.get("/", async (req, res) => {
+    try {
+        const payload = await Item.findAll();
+        res.status(200).json({ status: "success", payload });
+    } catch(err){
+        res.status(500).json({ status: "error", payload: err.message });
+    }
+})
+
+
 // GET all helmets
 router.get("/helmet", async (req, res) => {
-    console.log('hit')
     try {
-        const payload = await Item.findALL({ where : { item_type: 'helmet'}});
+        const payload = await Item.findAll({where : { item_type: 'helmet'} });
         res.status(200).json({ status: "success", payload });
     } catch(err){
         res.status(500).json({ status: "error", payload: err.message });
@@ -25,7 +35,7 @@ router.get("/helmet", async (req, res) => {
 // GET all torso
 router.get("/torso", async (req, res) => {
     try {
-        const payload = await Item.findALL({ where : { item_type: 'torso'}});
+        const payload = await Item.findAll({ where : { item_type: 'armor'}});
         res.status(200).json({ status: "success", payload });
     } catch(err){
         res.status(500).json({ status: "error", payload: err.message });
@@ -35,7 +45,7 @@ router.get("/torso", async (req, res) => {
 // GET all weapons
 router.get("/weapon", async (req, res) => {
     try {
-        const payload = await Item.findALL({ where : { item_type: 'weapon'}});
+        const payload = await Item.findAll({ where : { item_type: 'weapon'}});
         res.status(200).json({ status: "success", payload });
     } catch(err){
         res.status(500).json({ status: "error", payload: err.message });
@@ -45,7 +55,7 @@ router.get("/weapon", async (req, res) => {
 // GET all boots
 router.get("/boot", async (req, res) => {
     try {
-        const payload = await Item.findALL({ where : { item_type: 'boot'}});
+        const payload = await Item.findAll({ where : { item_type: 'boot'}});
         res.status(200).json({ status: "success", payload });
     } catch(err){
         res.status(500).json({ status: "error", payload: err.message });
@@ -55,7 +65,7 @@ router.get("/boot", async (req, res) => {
 // GET all gems
 router.get("/gem", async (req, res) => {
     try {
-        const payload = await Item.findALL({ where : { item_type: 'gem'}});
+        const payload = await Item.findAll({ where : { item_type: 'gem'}});
         res.status(200).json({ status: "success", payload });
     } catch(err){
         res.status(500).json({ status: "error", payload: err.message });
@@ -65,7 +75,7 @@ router.get("/gem", async (req, res) => {
 // GET all shields
 router.get("/shield", async (req, res) => {
     try {
-        const payload = await Item.findALL({ where : { item_type: 'shield'}});
+        const payload = await Item.findAll({ where : { item_type: 'shield'}});
         res.status(200).json({ status: "success", payload });
     } catch(err){
         res.status(500).json({ status: "error", payload: err.message });
