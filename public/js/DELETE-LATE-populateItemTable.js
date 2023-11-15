@@ -1,17 +1,38 @@
-// ----------------------------------------------------------------------------
-// update fetch route in buildItemOptions???
-// ----------------------------------------------------------------------------
-const itemDisplayArea = document.querySelector("#parentItemHolder");   // NEW BUTTONS GO HERE
-const itemTypeBtnsParent = document.querySelector("#itemSelectionTab");   // ONE BUTTON PER ITEM GOES HERE
+//-----------------------
+// Query Selectors
+//-----------------------
+const itemDisplayArea = document.querySelector("#parentItemHolder");
+const itemTypeBtnsParent = document.querySelector("#itemSelectionTab"); 
 
-// function buildHelmetOptionsEXAMPLE() {
-//   const helmets = []
-//   helmets.map(helmet => {
-//     // create a button with data attributes for that helmet
-//     // append that button to itemDisplayArea
-//   })
-// }
+//-----------------------
+// Drag and Drop Code
+//-----------------------
+function dragstartHandler(event){
+  const helmet = event.target.getAttribute('data-helmet');
+  console.log(helmet)
+  event.dataTransfer.setData("text/plain", helmet);
+}
 
+
+
+function dropHandler(event){
+  event.preventDefault();
+  console.log("we dropped!")
+  const data = event.dataTransfer.getData("text/plain");
+  console.log(data)
+}
+
+
+function dragoverHandler(event){
+  event.preventDefault();
+
+}
+
+
+//-----------------------
+// REPLACE WITH FECTH
+// Hard Coded items
+//-----------------------
 const items = [
   {
     "id": 1,
@@ -80,8 +101,7 @@ async function buildItemOptions(itemType) {
     const itemBtn = document.createElement('button')
     itemBtn.setAttribute("id", item.id) 
     itemBtn.innerHTML = `
-      <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
-      style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;" draggable='true'>
+      <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center" style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;" draggable='true' data-helmet='ultra'>
         <div class="card-body text-wrap"><span class="itemName">${item.name}</span>
           <img src="${item.link_to_photo}" class="itemImage card-img"
           style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="..." draggable="false">
@@ -96,7 +116,9 @@ async function buildItemOptions(itemType) {
         </div>
       </div>
     `
+    itemBtn.addEventListener("dragstart", dragstartHandler)
     itemDisplayArea.appendChild(itemBtn)
+
   })
 }
 
@@ -294,32 +316,3 @@ function updateCharacter (event){
 
 
 itemDisplayArea.addEventListener("click", updateCharacter)
-
-
-// ---------------------------------------------
-// Backup function for creating divs not buttons
-// ---------------------------------------------
-// async function buildItemOptions(itemType) {
-//   // const items = await fetch(`/api/${itemType}`)
-//   itemDisplayArea.innerHTML = "";
-//   items.map(item => {
-//     const divL = document.createElement('div')
-//     divL.innerHTML = `
-//       <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
-//       style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
-//         <div id="itemName" class="card-body text-wrap">${item.name}
-//           <img src="${item.link_to_photo}" class="card-img"
-//           style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
-//           <div class="card-values">
-//             <span class="healthClass">${item.health}</span>
-//             <span class="armorClass">${item.armor}</span>
-//             <span class="attackClass">${item.attack}</span>
-//             <span class="defenseClass">${item.defense}</span>
-//             <span class="speedClass">${item.speed}</span>
-//           </div>
-//         </div>
-//       </div>
-//     `
-//     itemDisplayArea.appendChild(divL)
-//   })
-// }
