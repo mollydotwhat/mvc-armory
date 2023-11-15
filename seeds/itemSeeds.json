@@ -1,26 +1,26 @@
 [
     {
-   "name":"base helmet",
+   "name":"Sturdy Helm",
    "Item_type": "helmet",
    "health":3,
-   "armor":4,
-   "attack":0,
-   "defense":4,
+   "armor":6,
+   "attack":1,
+   "defense":9,
    "speed":5,
    "link_to_photo":"../assets/images/items/helmets/helmet1.png"
 },
 {
-    "name":"knights helmet",
+    "name":"Knight Cap",
     "Item_type":"helmet",
     "health":5,
-    "armor":6,
-    "attack":0,
+    "armor":69,
+    "attack":1,
     "defense":6,
     "speed":4,
     "link_to_photo":"../assets/images/items/helmets/helmet2.png"   
 },
 {
-    "name":"Enchanted helmet",
+    "name":"Enchanted Helm",
     "Item_type":"helmet",
     "health":7,
     "armor":7,
@@ -30,107 +30,107 @@
     "link_to_photo":"../assets/images/items/helmets/helmet3.png"
 },
 {
-    "name":"silver helmet",
+    "name":"The Dizzy",
     "Item_type":"helmet",
     "health":6,
     "armor":5,
-    "attack":0,
+    "attack":1,
     "defense":7,
     "speed":6,
     "link_to_photo":"../assets/images/items/helmets/helmet4.png"
 },
 {
-    "name":"Gold helmet",
+    "name":"Gold Crown",
     "Item_type":"helmet",
     "health":6,
     "armor":9,
-    "attack":0,
+    "attack":1,
     "defense":8,
     "speed":7,
     "link_to_photo":"../assets/images/items/helmets/helmet5.png"   
 },
 {
-    "name":"Enchanted armor",
+    "name":"Enchanted Tunic",
     "Item_type":"armor",
     "health":7,
     "armor":4,
-    "attack":0,
+    "attack":3,
     "defense":5,
     "speed":7,
     "link_to_photo":"../assets/images/items/armor/armor1.png"    
 },
 {
-    "name":"knights armor",
+    "name":"Knight's Plate",
     "Item_type":"armor",
     "health":5,
     "armor":6,
-    "attack":0,
+    "attack":1,
     "defense":6,
     "speed":4,
     "link_to_photo":"../assets/images/items/armor/armor2.png"   
 },
 {
-    "name":"Battle armor",
+    "name":"Carapace ",
     "Item_type":"armor",
     "health":8,
     "armor":7,
-    "attack":0,
+    "attack":3,
     "defense":7,
     "speed":4,
     "link_to_photo":"../assets/images/items/armor/armor3.png"   
 },
 {
-    "name":"light armor",
+    "name":"Leather Tunic",
     "Item_type":"armor",
     "health":5,
     "armor":4,
-    "attack":0,
+    "attack":1,
     "defense":4,
     "speed":7,
     "link_to_photo":"../assets/images/items/armor/armor4.png"   
 },
 {
-    "name":"heavy armor",
+    "name":"Heavy Plate",
     "Item_type":"armor",
     "health":8,
     "armor":9,
-    "attack":0,
+    "attack":6,
     "defense":8,
     "speed":1,
     "link_to_photo":"../assets/images/items/armor/armor5.png"    
 },
 {
-    "name":"leather boots",
+    "name":"Leather Boots",
     "Item_type":"boot",
-    "health":2,
+    "health":4,
     "armor":1,
-    "attack":0,
+    "attack":3,
     "defense":1,
     "speed":9,
     "link_to_photo":"../assets/images/items/boots/boots1.png"    
 },
 {
-    "name":"training boots",
+    "name":"Training Boots",
     "Item_type":"boot",
-    "health":3,
-    "armor":3,
-    "attack":0,
+    "health":4,
+    "armor":4,
+    "attack":1,
     "defense":3,
     "speed":7,
     "link_to_photo":"../assets/images/items/boots/boots2.png"   
 },
 {
-    "name":"bronze boots",
+    "name":"Bronze Shoes",
     "Item_type":"boot",
     "health":5,
     "armor":4,
-    "attack":0,
+    "attack":3,
     "defense":4,
     "speed":5,
     "link_to_photo":"../assets/images/items/boots/boots3.png"   
 },
 {
-    "name":"silver boots",
+    "name":"Silver Shoes",
     "Item_type":"boot",
     "health":7,
     "armor":6,
@@ -140,7 +140,7 @@
     "link_to_photo":"../assets/images/items/boots/boots4.png"   
 },
 {
-    "name":"knights boots",
+    "name":"Knight's Boots",
     "Item_type":"boot",
     "health":8,
     "armor":7,
@@ -150,7 +150,7 @@
     "link_to_photo":"../assets/images/items/boots/boots5.png"   
 },
 {
-    "name":"armor gem",
+    "name":"Armor Gem",
     "Item_type":"gem",
     "health":0,
     "armor":9,
@@ -160,7 +160,7 @@
     "link_to_photo":"../assets/images/items/gems/armorGem.png"   
 },
 {
-    "name":"attack gem",
+    "name":"Attack Gem",
     "Item_type":"gem",
     "health":0,
     "armor":0,
@@ -170,7 +170,7 @@
     "link_to_photo":"../assets/images/items/gems/attackGem.png"    
 },
 {
-    "name":"defense gem",
+    "name":"Defense Gem",
     "Item_type":"gem",
     "health":0,
     "armor":0,
@@ -180,7 +180,7 @@
     "link_to_photo":"../assets/images/items/gems/defenseGem.png"   
 },
 {
-    "name":"health gem",
+    "name":"Health Gem",
     "Item_type":"gem",
     "health":9,
     "armor":0,
@@ -190,7 +190,7 @@
     "link_to_photo":"../assets/images/items/gems/healthGem.png"   
 },
 {
-    "name":"speed gem",
+    "name":"Speed Gem",
     "Item_type":"gem",
     "health":0,
     "armor":0,
@@ -200,7 +200,7 @@
     "link_to_photo":"../assets/images/items/gems/speedGem.png"   
 },
 {
-    "name":"axe",
+    "name":"Strong Axe",
     "Item_type":"weapon",
     "health":0,
     "armor":0,
@@ -210,7 +210,7 @@
     "link_to_photo":"../assets/images/items/weapons/axe5.png"   
 },
 {
-    "name":"hammer",
+    "name":"Crude Hammer",
     "Item_type":"weapon",
     "health":0,
     "armor":0,
@@ -220,7 +220,7 @@
     "link_to_photo":"../assets/images/items/weapons/hammer1.png"    
 },
 {
-    "name":"staff",
+    "name":"Fire Staff",
     "Item_type":"weapon",
     "health":0,
     "armor":0,
@@ -230,7 +230,7 @@
     "link_to_photo":"../assets/images/items/weapons/hammer1.png"     
 },
 {
-    "name":"sword",
+    "name":"Broad Sword",
     "Item_type":"weapon",
     "health":0,
     "armor":0,
@@ -240,7 +240,7 @@
     "link_to_photo":"../assets/images/items/weapons/sword1.png"     
 },
 {
-    "name":"wodden shield",
+    "name":"Wood Sheild",
     "Item_type":"shield",
     "health":0,
     "armor":0,
@@ -250,7 +250,7 @@
     "link_to_photo":"../assets/images/items/sheilds/shield1.png"     
 },
 {
-    "name":"knights shield",
+    "name":"Knight's Shield",
     "Item_type":"shield",
     "health":0,
     "armor":0,
@@ -260,7 +260,7 @@
     "link_to_photo":"../assets/images/items/shields/shield2.png"      
 },
 {
-    "name":"gold shield",
+    "name":"Gold Sheild",
     "Item_type":"shield",
     "health":0,
     "armor":0,
@@ -270,7 +270,7 @@
     "link_to_photo":"../assets/images/items/shields/shield3.png"      
 },
 {
-    "name":"bronze shield",
+    "name":"Bronze Shield",
     "Item_type":"shield",
     "health":0,
     "armor":0,
@@ -280,7 +280,7 @@
     "link_to_photo":"../assets/images/items/shields/shield4.png"  
 },
 {
-    "name":"iron shield",
+    "name":"Iron Shield",
     "Item_type":"shield",
     "health":0,
     "armor":0,
