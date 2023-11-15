@@ -1,0 +1,262 @@
+<body>
+  <!--loadout container -->
+  <div class="container-fluid bg-secondary-subtle justify-content-center border-light border text-center"
+    style="max-width:75%;">
+    <div class="h3 mx-auto pt-3 mt-3 text-danger border-2 text-warning-emphasis border-light-subtle">
+      <h1>Customize Loadout</h1>
+    </div>
+    <!-- items db navbar -->
+    <nav class="nav nav-tabs d-flex flex justify-content-center">
+      <a class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Helmets</a>
+        <a class="nav-item">
+          <a class="nav-link" aria-disabled="true" href="#">Torso</a>
+        </a>
+        <a class="nav-item">
+          <a class="nav-link" aria-disabled="true" href="#">Boots</a>
+        </a>
+        <a class="nav-item">
+          <a class="nav-link" aria-disabled="true" href="#">Weapons</a>
+        </a>
+        <a class="nav-item">
+          <a class="nav-link" aria-disabled="true" href="#">Shields</a>
+        </a>
+        <a class="nav-item">
+          <a class="nav-link" aria-disabled="true" href="#">Gems</a>
+        </a>
+    </nav>
+
+    <!--db container -->
+    <div class="d-flex flex-fill justify-content-center">
+      <!-- placeholder item-->
+      <div class="card bg-dark-subtle shadow-lg border-light justify-content-center text-center"
+        style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+        <div class="card-body text-wrap">Helm
+          <img src="../assets/images/items/helmets/helmet3.png" class="card-img"
+            style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+          <div class="card-values">
+            <span class="healthClass">3</span>
+            <span class="armorClass">4</span>
+            <span class="attackClass">10</span>
+            <span class="defenseClass">3</span>
+            <span class="speedClass">4</span>
+          </div>
+        </div>
+      </div>
+
+      <!--placeholder item-->
+      <div class="card bg-dark-subtle shadow-lg border-light justify-content-center text-center"
+        style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+        <div class="card-body text-wrap">Helm
+          <img src="../assets/images/items/helmets/helmet3.png" class="card-img"
+            style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+          <div class="card-values">
+            <span class="healthClass">3</span>
+            <span class="armorClass">4</span>
+            <span class="attackClass">10</span>
+            <span class="defenseClass">3</span>
+            <span class="speedClass">4</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- placeholder item-->
+      <div class="card bg-dark-subtle shadow-lg border-light justify-content-center text-center"
+        style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+        <div class="card-body text-wrap">Helm
+          <img src="../assets/images/items/helmets/helmet3.png" class="card-img"
+            style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+          <div class="card-values">
+            <span class="healthClass">3</span>
+            <span class="armorClass">4</span>
+            <span class="attackClass">10</span>
+            <span class="defenseClass">3</span>
+            <span class="speedClass">4</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- placeholder item-->
+      <div class="card bg-dark-subtle shadow-lg border-light justify-content-center text-center"
+        style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+        <div class="card-body text-wrap">Helm
+          <img src="../assets/images/items/helmets/helmet3.png" class="card-img"
+            style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+          <div class="card-values">
+            <span class="healthClass">3</span>
+            <span class="armorClass">4</span>
+            <span class="attackClass">10</span>
+            <span class="defenseClass">3</span>
+            <span class="speedClass">4</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- placeholder item-->
+      <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
+        style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+        <div class="card-body text-wrap">Helm
+          <img src="../assets/images/items/helmets/helmet3.png" class="card-img"
+            style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+          <div class="card-values">
+            <span class="healthClass">3</span>
+            <span class="armorClass">4</span>
+            <span class="attackClass">10</span>
+            <span class="defenseClass">3</span>
+            <span class="speedClass">4</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- character container -->
+    <div class="container shadow-lg border bg-dark-subtle border-2 border-light-subtle mt-2 mb-2 pt-2 pb-2"
+      style="min-width:450px; max-width:500px; min-height:700px">
+      <div class="container-fluid justify-content-center">
+        <!-- current character name id-->
+        <h1 id="cur-character-id" class="border-bottom">cur-character-id</h1>
+        <!-- save new character form-->
+        <div class="form-outline mb-4">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter new character name.."
+              aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="saveNewBtn">Save</button>
+          </div>
+        </div>
+        <!-- character img-->
+        <img src="../assets/images/userUI/character.gif" class="char-gif mb-1">
+        <!-- -->
+        <div class="row">
+          <div class="char-values" style="font-size:3rem">
+            <span><i class="bi bi-heart-fill"> </i><span class="healthClass">17</span></span>
+            <span><i class="bi bi-shield-shaded"></i> <span class="armorClass">13</span></span>
+            <span><i class="bi bi-hammer"></i> <span class="attackClass">12</span></span>
+            <span><i class="bi bi-bricks"></i> <span class="defenseClass">11</span></span>
+            <span><i class="bi bi-lightning-fill"></i> <span class="speedClass">13</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!--helmet-->
+      <div class="row justify-content-center">
+        <div class="col-3 col-sm-3 col-lg-3 justify-content-center">
+          <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
+            style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+            <div class="card-body text-wrap">Helm
+              <img src="../assets/images/items/helmets/helmet3.png" class="card-img"
+                style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+              <div class="card-values">
+                <span class="healthClass">3</span>
+                <span class="armorClass">4</span>
+                <span class="attackClass">10</span>
+                <span class="defenseClass">3</span>
+                <span class="speedClass">4</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--shield-->
+      <div class="row justify-content-center">
+        <div class="col-3 col-sm-3 col-lg-3">
+          <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
+            style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+            <div class="card-body text-wrap">Shield
+              <img src="../assets/images/items/shields/shield3.png" class="card-img"
+                style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+              <div class="card-values">
+                <span class="healthClass">3</span>
+                <span class="armorClass">4</span>
+                <span class="attackClass">10</span>
+                <span class="defenseClass">3</span>
+                <span class="speedClass">4</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--torso-->
+        <div class="col-3 col-sm-3 col-lg-3">
+
+          <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
+            style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+            <div class="card-body text-wrap">Carapace
+              <img src="../assets/images/items/armors/armor3.png" class="card-img"
+                style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+              <div class="card-values">
+                <span class="healthClass">10</span>
+                <span class="armorClass">3</span>
+                <span class="attackClass">10</span>
+                <span class="defenseClass">3</span>
+                <span class="speedClass">4</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!--weapon-->
+        <div class="col-3 col-sm-3 col-lg-3">
+          <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
+            style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+            <div class="card-body text-wrap">Weapon
+              <img src="../assets/images/items/weapons/staff1.png" class="card-img"
+                style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+              <div class="card-values">
+                <span class="healthClass">3</span>
+                <span class="armorClass">4</span>
+                <span class="attackClass">10</span>
+                <span class="defenseClass">3</span>
+                <span class="speedClass">4</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- gem -->
+      <div class="row justify-content-center">
+        <div class="col-3 col-sm-3 col-lg-3">
+          <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
+            style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+            <div class="card-body text-wrap">Health Gem
+              <img src="../assets/images/items/gems/healthGem.png" class="card-img"
+                style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+              <div class="card-values">
+                <span class="healthClass">10</span>
+                <span class="armorClass">3</span>
+                <span class="attackClass">10</span>
+                <span class="defenseClass">3</span>
+                <span class="speedClass">4</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--boots -->
+        <div class="col-3 col-sm-3 col-lg-3">
+          <div class="card bg-dark-subtle shadow-lg border-light justify-content-center align-center"
+            style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem;">
+            <div class="card-body text-wrap">Boots
+              <img src="../assets/images/items/boots/boots5.png" class="card-img"
+                style="max-width:3rem; max-height: 3rem; min-width:3rem; min-height: 3rem;" alt="...">
+              <div class="card-values">
+                <span class="healthClass">3</span>
+                <span class="armorClass">4</span>
+                <span class="attackClass">10</span>
+                <span class="defenseClass">3</span>
+                <span class="speedClass">4</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../public/js/logout.js"></script>
+  <script src="../public/js/login-signup.js"></script>
+</body>
+
+</html>

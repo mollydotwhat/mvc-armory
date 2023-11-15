@@ -2,23 +2,24 @@ const User = require('./User');
 
 const Character = require('./Character');
 const Item = require('./Item');
-const sequelize = require('sequelize');
+const CharacterItem = require('./CharacterItem')
+// const sequelize = require('sequelize');
 
-const CharacterItem = sequelize.define('CharacterItem', {
-  CharacterId: {
-    type: DataTypes.INTEGER,
-    references: {
-      model: Character,
-      key: 'id'
-    }},
-  ItemId: {
-    type: DataTypes.INTEGER,
-    references: {
-      model: Item,
-      key: 'id'
-    }}
-} 
-);
+// const CharacterItem = sequelize.define('CharacterItem', {
+//   CharacterId: {
+//     type: DataTypes.INTEGER,
+//     references: {
+//       model: Character,
+//       key: 'id'
+//     }},
+//   ItemId: {
+//     type: DataTypes.INTEGER,
+//     references: {
+//       model: Item,
+//       key: 'id'
+//     }}
+// } 
+// );
 
 User.hasMany(Character, {
   // it looks to me like the foreign id specified here is what this model gives to the character model but I may be confused.
@@ -31,12 +32,17 @@ User.hasMany(Character, {
 Character.belongsTo(User, {
   // in the docs it looks like this one doesn't need a foreign id specified? But maybe it doesn't mean it can't have one. leaving for now.
   foreignKey: 'character_id',
-  onDelete: 'UPDATE',
+  onDelete: 'SET NULL',
 })
 
 
-Character.belongsToMany(Item, { through: 'CharacterItem' });
-Item.belongsToMany(Character, { through: 'CharacterItem' });
+Character.belongsToMany(Item, 
+  { through: CharacterItem, foreignKey: "character_id" }, 
+  );
+
+Item.belongsToMany(Character, 
+  { through: CharacterItem, foreignKey: "item_id"  }
+  );
 
 
-module.exports = { User, Character, Item }
+module.exports = { User, Character, Item, CharacterItem}

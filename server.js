@@ -1,4 +1,5 @@
 const express = require('express');
+
 const app = express();
 
 // Add if using handlebars
@@ -8,7 +9,7 @@ app.engine('handlebars', hbs.engine); // express: here's a new rendering engine
 app.set('view engine', 'handlebars'); // express: make handlebars the default renderer
 
 const path = require('path')
-const routes = require('./routes')
+const routes = require('./controllers')
 const sequelize = require('./config/connection');
 
 // Import models to sync with database
@@ -30,6 +31,6 @@ app.use('*', routes);
 
 
 const okToSync = (process.env.NODE_ENV === 'production') ? false : true;
-sequelize.sync({ force: okToSync}).then(()=> {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'))
 })

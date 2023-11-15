@@ -1,16 +1,15 @@
-const router = require('express').Router()
 
-// import all api route files here
-const userApiRoutes = require('./api/user.api.routes')
+const router = require('express').Router();
+const apiRoutes = require('./api');
 
-// import all html files route files here
-const userHtmlRoutes = require('./html/user.html.routes')
+router.use('/api', apiRoutes);
 
-// Add api routes to the router
-router.use('/api/user', userApiRoutes);
-
-
-// Add html routes to the router
-router.use('/user', userHtmlRoutes);
+// GET route for getting all of the dishes that are on the menu
+router.get('/', async (req, res) => {
+  // This method is rendering the 'all' Handlebars.js template. This is how we connect each route to the correct template.
+  res.render('loadout');
+});
 
 module.exports = router;
+
+
