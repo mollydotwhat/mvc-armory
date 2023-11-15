@@ -449,6 +449,7 @@ function grabCharacterInfo() {
   const bootId = document.querySelector("#bootStatsCard").firstElementChild.getAttribute("item_id")
 
   const characterBuild = {
+    name: "defaultNameForNow",
     helmet_id: helmetId,
     torso_id: torsoId,
     weapon_id: weaponId,
@@ -461,3 +462,35 @@ function grabCharacterInfo() {
 
   return (characterBuild);
 }
+
+// function saveCharacter(){
+//   const character = grabCharacterInfo()
+// }
+
+const saveCharacter = async (event) => {
+  event.preventDefault();
+
+  console.log("loginFormHandler Started")
+  // Collect values from the login form
+  const character = grabCharacterInfo();
+
+  // Send a POST request to the API endpoint
+  const response = await fetch('/api/character/save', {
+    method: 'POST',
+    body: JSON.stringify(character),
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (response.ok) {
+    // If successful, redirect the browser to the profile page
+    alert("character saved")
+    // document.location.replace('/loadout');
+  } else {
+    alert(response.statusText);
+  }
+  
+};
+
+document
+  .querySelector('#saveCharBtn')
+  .addEventListener('click', saveCharacter);
