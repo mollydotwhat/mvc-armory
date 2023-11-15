@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Item } = require('../../models/Item');
+const Item = require('../../models/Item');
 
 // GET individual item
 router.get("/:id", async (req, res) => {
@@ -13,6 +13,7 @@ router.get("/:id", async (req, res) => {
 
 // GET all helmets
 router.get("/helmet", async (req, res) => {
+    console.log('hit')
     try {
         const payload = await Item.findALL({ where : { item_type: 'helmet'}});
         res.status(200).json({ status: "success", payload });
