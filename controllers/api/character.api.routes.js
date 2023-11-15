@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Character = require('../../Characters/Character');
+const Character = require('../../models/Character');
 
 
 // Add GET request that pulls a character by id (character's id)
@@ -10,14 +10,14 @@ const Character = require('../../Characters/Character');
 
 
 // // Get all characters
-// router.get('/', async (req, res) => {
-//   try {
-//     const payload = await Character.findAll();
-//     res.status(200).json({ status: 'success', payload })
-//   } catch (err) {
-//     res.status(500).json({ status: 'error', payload: err.message })
-//   }
-// })
+router.get('/', async (req, res) => {
+  try {
+    const payload = await Character.findAll();
+    res.status(200).json({ status: 'success', payload })
+  } catch (err) {
+    res.status(500).json({ status: 'error', payload: err.message })
+  }
+})
 
 // // Get one record by pk
 // router.get('/:id', async (req, res) => {
@@ -32,12 +32,21 @@ const Character = require('../../Characters/Character');
 // // Create a new record
 router.post('/', async (req, res) => {
   try {
-    const payload = await Character.create({...req.body, user_id: req.session.user_id});
-    res.status(200).json({ status: 'success', payload })
+    console.log(req.body)
+    console.log(req.session.user_id)
+    const payload = await Character.create(
+      {
+        ...req.body, 
+        user_id: req.session.user_id
+      },
+    );
+    console.log(payload)
+    res.status(200).json({ status: 'success', payload})
   } catch (err) {
     res.status(500).json({ status: 'error', payload: err.message })
   }
 })
+
 
 // // Update a records
 // router.put('/:id', async (req, res) => {

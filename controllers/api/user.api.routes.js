@@ -72,4 +72,16 @@ router.post('/logout', (req, res) => {
   }
 });
 
+// Get All Users
+router.get('/all', async (req, res) => {
+  try {
+    const payload = await User.findAll();
+    res.status(200).json({ status: 'success', payload })
+  } catch (err) {
+    res.status(500).json({ status: 'error', payload: err.message })
+  }
+})
+
+
+
 module.exports = router;
