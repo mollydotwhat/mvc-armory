@@ -20,7 +20,7 @@ const charSlotBoot = document.querySelector('#bootStatsCard')
 //-------------------------------------------------------------------------
 const hardCodedItems = [
   {
-    "id": 0,
+    "id": 1,
     "name":"base helmet",
     "item_type": "helmet",
     "health":3,
@@ -31,51 +31,7 @@ const hardCodedItems = [
     "link_to_photo":"/assets/images/items/helmets/helmet1.png"
   },
   {
-    "id": 1,
-    "name":"knights helmet",
-    "item_type":"helmet",
-    "health":5,
-    "armor":6,
-    "attack":0,
-    "defense":6,
-    "speed":4,
-    "link_to_photo":"/assets/images/items/helmets/helmet2.png"
-  },
-  {
-    "id": 2,
-    "name":"Enchanted helmet",
-    "item_type":"helmet",
-    "health":7,
-    "armor":7,
-    "attack":0,
-    "defense":6,
-    "speed":5,
-    "link_to_photo":"/assets/images/items/helmets/helmet3.png"
-  },
-  {
-    "id": 3,
-    "name":"silver helmet",
-    "item_type":"helmet",
-    "health":6,
-    "armor":5,
-    "attack":0,
-    "defense":7,
-    "speed":6,
-    "link_to_photo":"/assets/images/items/helmets/helmet4.png"
-  },
-  {
-    "id": 4,
-    "name":"Gold helmet",
-    "item_type":"helmet",
-    "health":6,
-    "armor":9,
-    "attack":0,
-    "defense":8,
-    "speed":7,
-    "link_to_photo":"/assets/images/items/helmets/helmet5.png"
-  },
-  {
-    'id': 5,
+    'id': 26,
     "name":"wodden shield",
     "item_type":"shield",
     "health":0,
@@ -86,7 +42,7 @@ const hardCodedItems = [
     "link_to_photo":"/assets/images/items/shields/shield1.png"     
   },
   {
-    'id': 6,
+    'id': 11,
       "name":"leather boots",
       "item_type":"boot",
       "health":2,
@@ -97,7 +53,7 @@ const hardCodedItems = [
       "link_to_photo":"/assets/images/items/boots/boots1.png"    
   },
   {
-    'id': 7,
+    'id': 21,
     "name":"axe",
     "item_type":"weapon",
     "health":0,
@@ -108,7 +64,7 @@ const hardCodedItems = [
     "link_to_photo":"/assets/images/items/weapons/axe5.png"   
 },
 {
-  'id': 8,
+  'id': 16,
   "name":"armor gem",
   "item_type":"gem",
   "health":0,
@@ -119,7 +75,7 @@ const hardCodedItems = [
   "link_to_photo":"/assets/images/items/gems/armorGem.png"   
 },
 {
-  'id': 9,
+  'id': 6,
   "name":"Enchanted armor",
   "item_type":"armor",
   "health":7,
@@ -240,15 +196,15 @@ function generateType(data){
 // Generate starting Helmet
 generateType(hardCodedItems[0])
 // Generate Starting Shield
-generateType(hardCodedItems[5])
+generateType(hardCodedItems[1])
 // Generate Starting Boots
-generateType(hardCodedItems[6])
+generateType(hardCodedItems[2])
 // Generate Starting Weapon
-generateType(hardCodedItems[7])
+generateType(hardCodedItems[3])
 // Generate Starting Gem
-generateType(hardCodedItems[8])
+generateType(hardCodedItems[4])
 // Generate Starting Torso
-generateType(hardCodedItems[9])
+generateType(hardCodedItems[5])
 
 
 //-------------------------------------------------------------------------
@@ -449,13 +405,13 @@ function grabCharacterInfo() {
   const bootId = document.querySelector("#bootStatsCard").firstElementChild.getAttribute("item_id")
 
   const characterBuild = {
-    name: "defaultNameForNow",
-    helmet_id: helmetId,
-    torso_id: torsoId,
-    weapon_id: weaponId,
-    shield_id: shieldId,
-    boots_id: bootId,
-    gem_id: gemId,
+    char_name: "defaultNameForNow",
+    helmet_id: Number(helmetId),
+    torso_id: Number(torsoId),
+    weapon_id: Number(weaponId),
+    shield_id: Number(shieldId),
+    boots_id: Number(bootId),
+    gem_id: Number(gemId),
   }
 
   console.log(characterBuild)
@@ -475,12 +431,12 @@ const saveCharacter = async (event) => {
   const character = grabCharacterInfo();
 
   // Send a POST request to the API endpoint
-  const response = await fetch('/api/character/save', {
+  const response = await fetch('/api/character/', {
     method: 'POST',
     body: JSON.stringify(character),
     headers: { 'Content-Type': 'application/json' },
   });
-
+  console.log(response)
   if (response.ok) {
     // If successful, redirect the browser to the profile page
     alert("character saved")

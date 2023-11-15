@@ -30,14 +30,17 @@ router.get('/', async (req, res) => {
 // })
 
 // // Create a new record
-router.post('/save', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
+    console.log(req.body)
+    console.log(req.session.user_id)
     const payload = await Character.create(
       {
         ...req.body, 
         user_id: req.session.user_id
-      }
+      },
     );
+    console.log(payload)
     res.status(200).json({ status: 'success', payload})
   } catch (err) {
     res.status(500).json({ status: 'error', payload: err.message })
