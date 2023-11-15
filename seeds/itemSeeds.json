@@ -57,7 +57,7 @@
     "attack":0,
     "defense":5,
     "speed":7,
-    "link_to_photo":"../assets/images/items/armor/armor1.png"    
+    "link_to_photo":"../assets/images/items/armors/armor1.png"    
 },
 {
     "name":"knights armor",
@@ -67,7 +67,7 @@
     "attack":0,
     "defense":6,
     "speed":4,
-    "link_to_photo":"../assets/images/items/armor/armor2.png"   
+    "link_to_photo":"../assets/images/items/armors/armor2.png"   
 },
 {
     "name":"Battle armor",
@@ -77,7 +77,7 @@
     "attack":0,
     "defense":7,
     "speed":4,
-    "link_to_photo":"../assets/images/items/armor/armor3.png"   
+    "link_to_photo":"../assets/images/items/armors/armor3.png"   
 },
 {
     "name":"light armor",
@@ -87,7 +87,7 @@
     "attack":0,
     "defense":4,
     "speed":7,
-    "link_to_photo":"../assets/images/items/armor/armor4.png"   
+    "link_to_photo":"../assets/images/items/armors/armor4.png"   
 },
 {
     "name":"heavy armor",
@@ -97,7 +97,7 @@
     "attack":0,
     "defense":8,
     "speed":1,
-    "link_to_photo":"../assets/images/items/armor/armor5.png"    
+    "link_to_photo":"../assets/images/items/armors/armor5.png"    
 },
 {
     "name":"leather boots",
@@ -200,54 +200,64 @@
     "link_to_photo":"../assets/images/items/gems/speedGem.png"   
 },
 {
-    "name":"axe",
+    "name":"Just an Axe",
     "item_type":"weapon",
     "health":0,
     "armor":0,
-    "attack":7,
+    "attack":3,
     "defense":0,
     "speed":0,
     "link_to_photo":"../assets/images/items/weapons/axe5.png"   
 },
 {
-    "name":"hammer",
+    "name":"Ben's Hammer of Judgement",
     "item_type":"weapon",
     "health":0,
     "armor":0,
-    "attack":6,
+    "attack":9,
     "defense":0,
     "speed":0,
     "link_to_photo":"../assets/images/items/weapons/hammer1.png"    
 },
 {
-    "name":"staff",
+    "name":"Dizzy's staff",
     "item_type":"weapon",
-    "health":0,
-    "armor":0,
+    "health":3,
+    "armor":3,
     "attack":5,
-    "defense":0,
-    "speed":0,
-    "link_to_photo":"../assets/images/items/weapons/hammer1.png"     
+    "defense":3,
+    "speed":3,
+    "link_to_photo":"../assets/images/items/weapons/staff1.png"     
 },
 {
-    "name":"sword",
+    "name":"Katie's sword",
     "item_type":"weapon",
     "health":0,
     "armor":0,
+    "attack":8,
+    "defense":0,
+    "speed":3,
+    "link_to_photo":"../assets/images/items/weapons/sword3.png"     
+},
+{
+    "name":"Gary's sword",
+    "item_type":"weapon",
+    "health":0,
+    "armor":3,
     "attack":8,
     "defense":0,
     "speed":0,
     "link_to_photo":"../assets/images/items/weapons/sword1.png"     
 },
 {
-    "name":"wodden shield",
+    "name":"wooden shield",
     "item_type":"shield",
     "health":0,
     "armor":0,
     "attack":0,
     "defense":5,
     "speed":0,
-    "link_to_photo":"../assets/images/items/sheilds/shield1.png"     
+    "link_to_photo":"../assets/images/items/shields/shield1.png"     
 },
 {
     "name":"knights shield",
