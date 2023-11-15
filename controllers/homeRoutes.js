@@ -3,13 +3,26 @@ const { Character, CharacterItem, Item, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // -------------------------------------------------------------------
-// Sends user to home/landing page 
+// Sends user to login / landing screen
 // -------------------------------------------------------------------
 router.get('/', async (req, res) => {
   try {
-    res.render('landingpage', {  
-      logged_in: req.session.logged_in 
-    });
+    res.render('landingpage');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// -------------------------------------------------------------------
+// Sends user to loadout build screen
+// -------------------------------------------------------------------
+router.get('/loadout', async (req, res) => {
+  try {
+    if (req.session.logged_in ){
+      res.render('loadout')
+    } else {
+      res.redirect('/')
+    }
   } catch (err) {
     res.status(500).json(err);
   }

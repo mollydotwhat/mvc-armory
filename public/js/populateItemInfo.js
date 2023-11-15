@@ -28,7 +28,7 @@ const hardCodedItems = [
     "attack":0,
     "defense":4,
     "speed":5,
-    "link_to_photo":"../assets/images/items/helmets/helmet1.png"
+    "link_to_photo":"/assets/images/items/helmets/helmet1.png"
   },
   {
     "id": 1,
@@ -39,7 +39,7 @@ const hardCodedItems = [
     "attack":0,
     "defense":6,
     "speed":4,
-    "link_to_photo":"../assets/images/items/helmets/helmet2.png"
+    "link_to_photo":"/assets/images/items/helmets/helmet2.png"
   },
   {
     "id": 2,
@@ -50,7 +50,7 @@ const hardCodedItems = [
     "attack":0,
     "defense":6,
     "speed":5,
-    "link_to_photo":"../assets/images/items/helmets/helmet3.png"
+    "link_to_photo":"/assets/images/items/helmets/helmet3.png"
   },
   {
     "id": 3,
@@ -61,7 +61,7 @@ const hardCodedItems = [
     "attack":0,
     "defense":7,
     "speed":6,
-    "link_to_photo":"../assets/images/items/helmets/helmet4.png"
+    "link_to_photo":"/assets/images/items/helmets/helmet4.png"
   },
   {
     "id": 4,
@@ -72,7 +72,7 @@ const hardCodedItems = [
     "attack":0,
     "defense":8,
     "speed":7,
-    "link_to_photo":"../assets/images/items/helmets/helmet5.png"
+    "link_to_photo":"/assets/images/items/helmets/helmet5.png"
   },
   {
     'id': 5,
@@ -83,7 +83,7 @@ const hardCodedItems = [
     "attack":0,
     "defense":5,
     "speed":0,
-    "link_to_photo":"../assets/images/items/shields/shield1.png"     
+    "link_to_photo":"/assets/images/items/shields/shield1.png"     
   },
   {
     'id': 6,
@@ -94,7 +94,7 @@ const hardCodedItems = [
       "attack":0,
       "defense":1,
       "speed":9,
-      "link_to_photo":"../assets/images/items/boots/boots1.png"    
+      "link_to_photo":"/assets/images/items/boots/boots1.png"    
   },
   {
     'id': 7,
@@ -105,7 +105,7 @@ const hardCodedItems = [
     "attack":7,
     "defense":0,
     "speed":0,
-    "link_to_photo":"../assets/images/items/weapons/axe5.png"   
+    "link_to_photo":"/assets/images/items/weapons/axe5.png"   
 },
 {
   'id': 8,
@@ -116,7 +116,7 @@ const hardCodedItems = [
   "attack":0,
   "defense":0,
   "speed":0,
-  "link_to_photo":"../assets/images/items/gems/armorGem.png"   
+  "link_to_photo":"/assets/images/items/gems/armorGem.png"   
 },
 {
   'id': 9,
@@ -127,7 +127,7 @@ const hardCodedItems = [
   "attack":0,
   "defense":5,
   "speed":7,
-  "link_to_photo":"../assets/images/items/armors/armor1.png"    
+  "link_to_photo":"/assets/images/items/armors/armor1.png"    
 },
 ]
 
@@ -257,11 +257,23 @@ generateType(hardCodedItems[9])
 async function buildItemOptions(itemType) {
   //---------------------------------------------------
   // fetch request here based on itemType
-  // const items = await fetch(`/api/${itemType}`)
-  const items = hardCodedItems;
+  let items = await fetch(`/api/item/${itemType}`, {
+    method: 'GET',
+    // body: JSON.stringify({ name, needed_funding, description }),
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  })
+
+  items = await items.json()
+
+  // const items = hardCodedItems;
   //---------------------------------------------------
+
+  console.log(items)
+
   itemDisplayArea.innerHTML = "";
-  items.map(item => {
+  items.payload.map(item => {
     const divEl = document.createElement('div')
     divEl.setAttribute("class", "card bg-dark-subtle shadow-lg border-light justify-content-center align-center")
     divEl.setAttribute("style", style="max-width:7rem; max-height: 7rem; min-width:7rem; min-height: 7rem; padding: 16px")
@@ -298,19 +310,19 @@ function getTheButtonClicked(event) {
       break;
 
     case "selectBoots":
-      buildItemOptions('boots');
+      buildItemOptions('boot');
       break;
 
     case "selectWeapons":
-      buildItemOptions('weapons');
+      buildItemOptions('weapon');
       break;
 
     case "selectShields":
-      buildItemOptions('shields');
+      buildItemOptions('shield');
       break;
 
     case "selectGems":
-      buildItemOptions('gems');
+      buildItemOptions('gem');
       break;
     
     default:
@@ -324,7 +336,7 @@ itemTypeBtnsParent.addEventListener("click", getTheButtonClicked)
 
 //-------------------------------------------------------------------------
 // Calculates the sum off each stat type based off the selected items
-// Tired template literals here to and loop through code but it kept breaking
+// SORRY GARY! We tired template literals here to and loop through code but it kept breaking
 //-------------------------------------------------------------------------
 function calculateCharacterStats() {
   // Grab Helmet Stats
