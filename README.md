@@ -19,6 +19,8 @@ Upon arriving to the web application, the user is presented with the login in sc
 
 Here the user is displayed with some information and can see a character to build. The character is prepopulated with basic gear. Using the category buttons, the user can select which item they'd like to change. Depending what item type they select, a grid of items will appear. The user can then drag and drop these items into their character's loadout. When this happens, the character's loadout is update with the new item and all the total stats are recalculated.
 
+After building the character the user can then click the save button. Upon doing so the user will be redirected to a new page that lists all their saved characters. If there is a character the user doesn't want anymore, they can click the coresponding delete button to delete that character for good.
+
 
 ## Questions
 Questions can be received on the [Github Repository](https://github.com/mollydotwhat/mvc-armory) for this application. Please make a new issue.
