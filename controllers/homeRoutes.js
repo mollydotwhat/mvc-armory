@@ -28,5 +28,19 @@ router.get('/loadout', async (req, res) => {
   }
 });
 
+// -------------------------------------------------------------------
+// Sends user to saved character screen
+// -------------------------------------------------------------------
+router.get('/saved-characters', async (req, res) => {
+  try {
+    if (req.session.logged_in ){
+      res.render('characters')
+    } else {
+      res.redirect('/')
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;

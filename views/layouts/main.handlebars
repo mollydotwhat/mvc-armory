@@ -62,7 +62,15 @@
 <nav class="navbar navbar-expand-lg bg-secondary-subtle mb-2 pb-2 shadow-lg border-bottom border-1 border-light">
   <!--drop down characters-->
   <div class="container mt-3 mb-3 pb-3 pt-3">
-    <div class="dropdown">
+    <div>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a
+            class=" btn btn-secondary btn-lg btn-outline-dark border border-warning-subtle text-white" type="button"
+            role="button" href="/saved-characters"><i class="bi bi-gear-fill px-1"></i>View Characters</a>
+        </li>
+      </ul>
+    </div>
+    {{!-- <div class="dropdown">
       <a class="btn btn-secondary border border-primary-subtle dropdown-toggle" role="button" type="button"
         id="dropdownMenuButtonDark" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-people-fill px-1 "
           style="font-size: 1.1rem;"></i>Characters</a>
@@ -80,7 +88,7 @@
         </li>
         <li><a class="dropdown-item" href="#">View All</a></li>
       </ul>
-    </div>
+    </div> --}}
     <!-- customize/loadout  -->
     <div>
       <ul class="navbar-nav">
@@ -92,7 +100,7 @@
     </div>
     <!-- login/logout -->
     <div class="row-1">
-      <button id="loginBtn" type="button" class="btn btn-primary mb-4">Login</button>
+      {{!-- <button id="loginBtn" type="button" class="btn btn-primary mb-4">Login</button> --}}
       <button id="logoutBtn" type="button" class="btn btn-outline-secondary mb-4">Logout</button>
     </div>
 </nav>

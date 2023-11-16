@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const Character = require('../../models/Character');
 
-
 // Add GET request that pulls a character by id (character's id)
 
 // Add GET request that pulls all characters that have a certain user_id
@@ -18,6 +17,18 @@ router.get('/', async (req, res) => {
     res.status(500).json({ status: 'error', payload: err.message })
   }
 })
+
+
+router.get('/load', async (req, res) => {
+  try {
+    const payload = await Character.findAll({where : { user_id: req.session.user_id} });
+    res.status(200).json({ status: 'success', payload })
+  } catch (err) {
+    res.status(500).json({ status: 'error', payload: err.message })
+  }
+})
+
+
 
 // // Get one record by pk
 // router.get('/:id', async (req, res) => {
@@ -65,18 +76,18 @@ router.post('/', async (req, res) => {
 //   }
 // })
 
-// // Delete a record
-// router.delete('/:id', async (req, res) => {
-//   try {
-//     const payload = await Character.destroy({
-//       where: {
-//         id: req.params.id
-//       }
-//     });
-//     res.status(200).json({ status: 'success' })
-//   } catch (err) {
-//     res.status(500).json({ status: 'error', payload: err.message })
-//   }
-// })
+// Delete a record
+router.delete('/delete/:id', async (req, res) => {
+  try {
+    const payload = await Character.destroy({
+      where: {
+        id: req.params.id
+      }
+    });
+    res.status(200).json({ status: 'success' })
+  } catch (err) {
+    res.status(500).json({ status: 'error', payload: err.message })
+  }
+})
 
 module.exports = router;

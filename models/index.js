@@ -37,11 +37,11 @@ Character.belongsTo(User, {
 
 
 Character.belongsToMany(Item, 
-  { through: CharacterItem, foreignKey: "character_id" }, 
+  { through: {model: CharacterItem}, foreignKey: "character_id" }, 
   );
 
 Item.belongsToMany(Character, 
-  { through: CharacterItem, foreignKey: "item_id"  }
+  { through: {model: CharacterItem}, foreignKey: "item_id"  }
   );
 
 
