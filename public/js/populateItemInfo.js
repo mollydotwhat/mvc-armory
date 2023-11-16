@@ -439,7 +439,7 @@ const saveCharacter = async (event) => {
   console.log(response)
   if (response.ok) {
     // If successful, redirect the browser to the profile page
-    alert("character saved")
+    document.location.replace('/saved-characters');
     // document.location.replace('/loadout');
   } else {
     alert(response.statusText);
